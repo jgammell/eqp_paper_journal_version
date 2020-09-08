@@ -1,0 +1,352 @@
+﻿% very deep convolutional networks for large-scale image recognition
+% training very deep networks
+
+@article{@crafton2019,
+  author    = {Brian Crafton and
+               Abhinav Parihar and
+               Evan Gebhardt and
+               Arijit Raychowdhury},
+  title     = {Direct Feedback Alignment with Sparse Connections for Local Learning},
+  journal   = {CoRR},
+  volume    = {abs/1903.02083},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1903.02083},
+  archivePrefix = {arXiv},
+  eprint    = {1903.02083},
+  timestamp = {Sun, 31 Mar 2019 19:01:24 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1903-02083.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@misc{simonyan2014,
+    title={Very Deep Convolutional Networks for Large-Scale Image Recognition},
+    author={Karen Simonyan and Andrew Zisserman},
+    year={2014},
+    eprint={1409.1556},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+
+@misc{srivastava2015tvdn,
+    title={Training Very Deep Networks},
+    author={Rupesh Kumar Srivastava and Klaus Greff and Jürgen Schmidhuber},
+    year={2015},
+    eprint={1507.06228},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+
+@article{hopfield1984,
+author = {Hopfield, John},
+year = {1984},
+month = {06},
+pages = {3088-92},
+title = {Neurons With Graded Response Have Collective Computational Properties Like Those of Two-State Neurons},
+volume = {81},
+journal = {Proceedings of the National Academy of Sciences of the United States of America},
+doi = {10.1073/pnas.81.10.3088}
+}
+% continuous Hopfield network
+
+
+@misc{scellier17,
+    title={Equilibrium Propagation: Bridging the Gap Between Energy-Based Models and Backpropagation},
+    author={Benjamin Scellier and Yoshua Bengio},
+    year={2016},
+    eprint={1602.05179},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+% Scellier's paper on equilibrium propagation
+
+@misc{mnist1998,
+         author = "Y. LeCun and C. Cortes",
+         title  = "The mnist database of handwritten digits",
+         year   = "1998"
+     }
+
+@article{watts98,
+         author  = "D. Watts and S. Strogatz",
+         title   = "Collective dynamics of 'small-world' networks",
+         journal = "Nature",
+         year    = "1998"
+        }
+% The original paper describing small-world networks
+
+@article{bullmore2009,
+         author  = "E. Bullmore and O. Sporns",
+         title   = "Complex brain networks: graph theoretical analysis of structural and functional systems",
+         journal = "Nature",
+         year    = "2009"
+        }
+% Asserts that small-world networks are present in biological brains
+
+@inproceedings{xiaohu2011,
+               author    = "L. Xiaohu and L. Xiaoling and Z. Jinhua and Z. Yulin and L. Maolin",
+               title     = "A new multilayer feedforward small-world neural network with its performances on function approximation",
+               booktitle = "2011 IEEE International Conference on Computer Science and Automation Engineering",
+               year      = "2011"
+              }
+% An example of small-world MLFFNN trained through backpropagation
+
+@misc{krishnan2019,
+    title={Structural Pruning in Deep Neural Networks: A Small-World Approach},
+    author={Gokul Krishnan and Xiaocong Du and Yu Cao},
+    year={2019},
+    eprint={1911.04453},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+% An example of a small-world deep convolutional network
+
+@InProceedings{glorot2010,
+  title = 	 {Understanding the difficulty of training deep feedforward neural networks},
+  author = 	 {Xavier Glorot and Yoshua Bengio},
+  booktitle = 	 {Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {249--256},
+  year = 	 {2010},
+  editor = 	 {Yee Whye Teh and Mike Titterington},
+  volume = 	 {9},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Chia Laguna Resort, Sardinia, Italy},
+  month = 	 {13--15 May},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf},
+  url = 	 {http://proceedings.mlr.press/v9/glorot10a.html},
+  abstract = 	 {Whereas before 2006 it appears that deep multi-layer neural networks were not successfully trained, since then several algorithms have been shown to successfully train them, with experimental results showing the superiority of deeper vs less deep architectures. All these experimental results were obtained with new initialization or training mechanisms. Our objective here is to understand better why standard gradient descent from random initialization is doing so poorly with deep neural networks, to better understand these recent relative successes and help design better algorithms in the future.  We first observe the influence of the non-linear activations functions. We find that the logistic sigmoid activation is unsuited for deep networks with random initialization because of its mean value, which can drive especially the top hidden layer into saturation. Surprisingly, we find that saturated units can move out of saturation by themselves, albeit slowly, and explaining the plateaus sometimes seen when training neural networks. We find that a new non-linearity that saturates less can often be beneficial. Finally, we study how activations and gradients vary across layers and during training, with the idea that training may be more difficult when the singular values of the Jacobian associated with each layer are far from 1.  Based on these considerations, we propose a new initialization scheme that brings substantially faster convergence.}
+}
+% Describes weight initialization scheme used by Scellier
+
+@article{bengio2015,
+  author    = {Yoshua Bengio and
+               Dong{-}Hyun Lee and
+               J{\"{o}}rg Bornschein and
+               Zhouhan Lin},
+  title     = {Towards Biologically Plausible Deep Learning},
+  journal   = {CoRR},
+  volume    = {abs/1502.04156},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1502.04156},
+  archivePrefix = {arXiv},
+  eprint    = {1502.04156},
+  timestamp = {Mon, 13 Aug 2018 16:46:59 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/BengioLBL15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+% Talks about biological implausibility of backpropagation, and leaky integrator neurons
+
+@article{bartunov2018,
+  author    = {Sergey Bartunov and
+               Adam Santoro and
+               Blake A. Richards and
+               Geoffrey E. Hinton and
+               Timothy P. Lillicrap},
+  title     = {Assessing the Scalability of Biologically-Motivated Deep Learning
+               Algorithms and Architectures},
+  journal   = {CoRR},
+  volume    = {abs/1807.04587},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1807.04587},
+  archivePrefix = {arXiv},
+  eprint    = {1807.04587},
+  timestamp = {Mon, 13 Aug 2018 16:46:02 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1807-04587.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+% Overview of biologically-motivated approaches and their effectiveness on hard datasets
+
+@misc{lillicrap2014,
+    title={Random feedback weights support learning in deep neural networks},
+    author={Timothy P. Lillicrap and Daniel Cownden and Douglas B. Tweed and Colin J. Akerman},
+    year={2014},
+    eprint={1411.0247},
+    archivePrefix={arXiv},
+    primaryClass={q-bio.NC}
+}
+% Lillicrap's paper that shows feedback connections will approach feedforward weights if not fixed
+
+@inproceedings{lee2015,
+author = {Lee, Dong-Hyun and Zhang, Saizheng and Fischer, Asja and Bengio, Y.},
+year = {2015},
+month = {08},
+pages = {498-515},
+title = {Difference Target Propagation},
+isbn = {978-3-319-23527-1},
+doi = {10.1007/978-3-319-23528-8_31}
+}
+% Difference target propagation paper
+
+@article{xie2003,
+author = {Xie, Xiaohui and Seung, Hyunjune},
+year = {2003},
+month = {03},
+pages = {441-54},
+title = {Equivalence of Backpropagation and Contrastive Hebbian Learning in a Layered Network},
+volume = {15},
+journal = {Neural computation},
+doi = {10.1162/089976603762552988}
+}
+% Contrastive Hebbian learning
+
+@article{pineda1987,
+title = "Generalization of back-propagation to recurrent neural networks",
+abstract = "An adaptive neural network with asymmetric connections is introduced. This network is related to the Hopfield network with graded neurons and uses a recurrent generalization of the rule of Rumelhart, Hinton, and Williams to modify adaptively the synaptic weights. The new network bears a resemblance to the master/slave network of Lapedes and Farber but it is architecturally simpler.",
+author = "Pineda, {Fernando J}",
+year = "1987",
+doi = "10.1103/PhysRevLett.59.2229",
+language = "English (US)",
+volume = "59",
+pages = "2229--2232",
+journal = "Physical Review Letters",
+issn = "0031-9007",
+publisher = "American Physical Society",
+number = "19",
+}
+
+% Recurrent backpropagation
+
+@inproceedings{oconnor2018,
+  title={Training a Network of Spiking Neurons with Equilibrium Propagation},
+  author={Peter O'Connor and Efstratios Gavves and Max Welling},
+  year={2018}
+}
+
+%Spiking EQP network
+
+@article{he2015,
+  author    = {Kaiming He and
+               Xiangyu Zhang and
+               Shaoqing Ren and
+               Jian Sun},
+  title     = {Deep Residual Learning for Image Recognition},
+  journal   = {CoRR},
+  volume    = {abs/1512.03385},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1512.03385},
+  archivePrefix = {arXiv},
+  eprint    = {1512.03385},
+  timestamp = {Wed, 17 Apr 2019 17:23:45 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/HeZRS15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+% ResNet paper
+
+@ARTICLE{shainline2019,
+       author = {{Shainline}, Jeffrey M. and {Buckley}, Sonia M. and
+         {McCaughan}, Adam N. and {Chiles}, Jeffrey T. and {Jafari Salim}, Amir and
+         {Castellanos-Beltran}, Manuel and {Donnelly}, Christine A. and
+         {Schneider}, Michael L. and {Mirin}, Richard P. and {Nam}, Sae Woo},
+        title = "{Superconducting optoelectronic loop neurons}",
+      journal = {Journal of Applied Physics},
+         year = "2019",
+        month = "Jul",
+       volume = {126},
+       number = {4},
+          eid = {044902},
+        pages = {044902},
+          doi = {10.1063/1.5096403},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019JAP...126d4902S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+% Our group's paper - maybe applicable to analog implementation
+
+@article{srivastava2015,
+  author    = {Rupesh Kumar Srivastava and
+               Klaus Greff and
+               J{\"{u}}rgen Schmidhuber},
+  title     = {Highway Networks},
+  journal   = {CoRR},
+  volume    = {abs/1505.00387},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1505.00387},
+  archivePrefix = {arXiv},
+  eprint    = {1505.00387},
+  timestamp = {Mon, 13 Aug 2018 16:48:21 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/SrivastavaGS15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+% Highway networks paper
+
+@article{ioffe2015,
+  author    = {Sergey Ioffe and
+               Christian Szegedy},
+  title     = {Batch Normalization: Accelerating Deep Network Training by Reducing
+               Internal Covariate Shift},
+  journal   = {CoRR},
+  volume    = {abs/1502.03167},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1502.03167},
+  archivePrefix = {arXiv},
+  eprint    = {1502.03167},
+  timestamp = {Mon, 13 Aug 2018 16:47:06 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/IoffeS15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+% Batch normalization paper
+
+@article{davies2018,
+author = {Davies, Mike and Srinivasa, Narayan and Lin, Tsung-Han and Chinya, Gautham and Joshi, Prasad and Lines, Andrew and Wild, Andreas and Wang, Hong},
+year = {2018},
+month = {01},
+pages = {1-1},
+title = {Loihi: A Neuromorphic Manycore Processor with On-Chip Learning},
+volume = {PP},
+journal = {IEEE Micro},
+doi = {10.1109/MM.2018.112130359}
+}
+
+% related to analog implementation
+
+@article{nahmias2013,
+author = {Nahmias, Mitchell and Shastri, Bhavin and Tait, A.N. and Prucnal, P.R.},
+year = {2013},
+month = {09},
+pages = {1-12},
+title = {A Leaky Integrate-and-Fire Laser Neuron for Ultrafast Cognitive Computing},
+volume = {19},
+journal = {Selected Topics in Quantum Electronics, IEEE Journal of},
+doi = {10.1109/JSTQE.2013.2257700}
+}
+
+% related to analog implementation
+
+@article{humphries2008,
+author = {Humphries, Mark and Gurney, Kevin},
+year = {2008},
+month = {02},
+pages = {e0002051},
+title = {Network ‘Small-World-Ness’: A Quantitative Method for Determining Canonical Network Equivalence},
+volume = {3},
+journal = {PloS one},
+doi = {10.1371/journal.pone.0002051}
+}
+% Talks about small-world coefficient
+
+@article{schmidhuber2015,
+   title={Deep learning in neural networks: An overview},
+   volume={61},
+   ISSN={0893-6080},
+   url={http://dx.doi.org/10.1016/j.neunet.2014.09.003},
+   DOI={10.1016/j.neunet.2014.09.003},
+   journal={Neural Networks},
+   publisher={Elsevier BV},
+   author={Schmidhuber, Jürgen},
+   year={2015},
+   month={Jan},
+   pages={85–117}
+}
+
+
+
+% References to get:
+%   Resnet and how it uses layer-skipping connections
+%   Other networks that use layer-skipping connections
+%   Leaky integrator neurons
+%   Need for deep networks
+%   How to implement on analog computer
+%   Cause of vanishing gradient problem in conventional MLFFNN
+%   Citations needed for python libraries?

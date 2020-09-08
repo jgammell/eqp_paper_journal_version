@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: shortened_paper.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Warning--empty booktitle in lee2015
+You've used 24 entries,
+            2118 wiz_defined-function locations,
+            630 strings with 8050 characters,
+and the built_in function-call counts, 7778 in all, are:
+= -- 711
+> -- 477
+< -- 3
++ -- 189
+- -- 162
+* -- 549
+:= -- 1350
+add.period$ -- 67
+call.type$ -- 24
+change.case$ -- 152
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 259
+empty$ -- 555
+format.name$ -- 162
+if$ -- 1582
+int.to.chr$ -- 0
+int.to.str$ -- 24
+missing$ -- 18
+newline$ -- 117
+num.names$ -- 50
+pop$ -- 165
+preamble$ -- 1
+purify$ -- 128
+quote$ -- 0
+skip$ -- 212
+stack$ -- 0
+substring$ -- 316
+swap$ -- 45
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 96
+warning$ -- 1
+while$ -- 62
+width$ -- 26
+write$ -- 247
+(There was 1 warning)
