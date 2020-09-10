@@ -1,21 +1,10 @@
-\documentclass[format=sigconf]{acmart}
-\keywords{deep learning, neural network, biologically-motivated, equilibrium propagation, vanishing gradient, small-world, neuromorphic hardware}
+\documentclass[10pt, letterpaper]{article}
 
-\copyrightyear{2020}
-\acmYear{2020}
-\setcopyright{usgov}
-\acmConference[ICONS 2020]{International Conference on Neuromorphic Systems 2020}{July 28--30, 2020}{Oak Ridge, TN, USA}
-\acmBooktitle{International Conference on Neuromorphic Systems 2020 (ICONS 2020), July 28--30, 2020, Oak Ridge, TN, USA}
-\acmPrice{}
-\acmDOI{10.1145/3407197.3407618}
-\acmISBN{978-1-4503-8851-1/20/07}
-
-%\usepackage{cite}
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{bm}
 \usepackage{amsmath}
-%\usepackage{amssymb}
+\usepackage{amssymb}
 \usepackage{subcaption}
 \usepackage{mathtools}
 \usepackage[title]{appendix}
@@ -23,7 +12,10 @@
 \usepackage{hyperref}
 \usepackage{adjustbox}
 \usepackage[title]{appendix}
-\usepackage[subtle]{savetrees}
+\usepackage[letterpaper]{geometry}
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{.3\textwidth}}
 
 \newcommand{\mtx}[1]{\bm{#1}}
 \newcommand{\rms}[1]{<{#1}>}
@@ -31,33 +23,7 @@
 \DeclareMathOperator*{\minimize}{minimize}
 
 \title{Layer-skipping connections facilitate training of layered networks using equilibrium propagation.}
-\author{Jimmy Gammell}
-\author{Sae Woo Nam}
-\author{Adam N. McCaughan}
-
-\begin{CCSXML}
-<ccs2012>
-   <concept>
-       <concept_id>10010147.10010257.10010293.10011809</concept_id>
-       <concept_desc>Computing methodologies~Bio-inspired approaches</concept_desc>
-       <concept_significance>500</concept_significance>
-       </concept>
-   <concept>
-       <concept_id>10010147.10010257.10010293.10010294</concept_id>
-       <concept_desc>Computing methodologies~Neural networks</concept_desc>
-       <concept_significance>500</concept_significance>
-       </concept>
-%   <concept>
-%       <concept_id>10010147.10010257.10010258.10010259</concept_id>
-%       <concept_desc>Computing methodologies~Supervised learning</concept_desc>
-%       <concept_significance>300</concept_significance>
-%       </concept>
- </ccs2012>
-\end{CCSXML}
-
-\ccsdesc[500]{Computing methodologies~Bio-inspired approaches}
-\ccsdesc[500]{Computing methodologies~Neural networks}
-%\ccsdesc[300]{Computing methodologies~Supervised learning}
+\author{Jimmy Gammell \and Sae Woo Nam \and Adam N. McCaughan}
 
 \begin{document}
 
@@ -88,6 +54,112 @@ Through this modification we have achieved 0\% training error (out of 50,000 exa
 Similarly to backpropagation, equilibrium propagation \cite{scellier17} trains networks by approximating gradient descent on a cost function. Equilibrium propagation is applicable to any network with dynamics characterized by evolution to a fixed point of an associated energy function; our implementation is a recreation of that in \cite{scellier17}, which applies it to a continuous Hopfield network \cite{hopfield1984}. The mathematical formulation of the framework can be found in \cite{scellier17}.
 \npar
 A major reason backpropagation is not biologically-plausible is that to implement it, each neuron would need two distinct mechanisms for information transmission: one to transmit its activation to shallower neurons during the forward-propagation phase, and another to transmit error-correction information to deeper neurons during the backward-propagation phase \cite{bengio2015}. While this is easy in a digital computer that can oversee and manipulate an entire network, it would be cumbersome in hardware (biological or otherwise) consisting of many simple, independent computational nodes with limited ability to share information. In contrast, equilibrium propagation consists of a free phase (comparable to forward-propagation) and a weakly-clamped phase (comparable to backward-propagation) during which each neuron only needs to know the activations of neighboring neurons, so only one mechanism for information transmission is needed \cite{scellier17}. In a similar vein, to implement backpropagation each neuron would need mechanisms to compute both an activation value using activations of deeper neurons and error-correction information using that of shallower neurons. For equilibrium propagation a neuron would only need the ability to compute an activation given those of adjacent neurons \cite{scellier17}.
+
+\subsubsection{Implementation in a continuous Hopfield network}
+
+Here we summarize the equations through which a continuous Hopfield network is trained using equilibrium propagation; this summary is based on the more-thorough and more-general treatment in \cite{scellier17}.
+\npar
+Consider a network with $n$ neurons organized into an input layer with $p$ neurons, hidden layers with $q$ neurons and an output layer with $r$ neurons. Let the activations of these neurons be denoted respectively by vectors $\mtx{x}\in\mathbb{R}^{p}$, $\mtx{h}\in\mathbb{R}^{q}$ and $\mtx{y}\in\mathbb{R}^{r}$, and let $\mtx{s}=(\mtx{h}^{T},\mtx{y}^{T})^{T}\in\mathbb{R}^{q+r}$ and $\mtx{u}=(\mtx{x}^{T}, \mtx{s}^{T})^{T}\in\mathbb{R}^{n}$ be vectors of, respectively, the activations of non-fixed (non-input) neurons and of all neurons in the network. Let $\mtx{W}\in\mathbb{R}^{n\times n}$ and $\mtx{b}\in\mathbb{R}^{n}$ denote the network's weights and biases where $w_{ij}$ is the connection weight between neurons $i$ and $j$ and $b_i$ is the bias for neuron $i$ ($\forall i \;w_{ii}=0$ to prevent self-connections), and let $\rho$ denote its activation function; here and in \cite{scellier17},
+\begin{equation}
+\label{eqn:hardened_sigmoid}
+\rho(x)=\begin{cases}0&x<0\\x&0\leq x\leq 1\\1&x>1\end{cases} 
+\end{equation} \sloppy is a hardened sigmoid function
+where $\rho'(0)=\rho'(1)$ is defined to be 1 to avoid neuron saturation. Let $\mtx{\rho}((x_1,\hdots, x_n)^T)=(\rho(x_1),\hdots,\rho(x_n))^T$.
+\npar
+The behavior of the network is to perform gradient descent on a total energy function $F$ that is modified by a training example $(\mtx{x}_d,\mtx{y}_d)$. Consider energy function $E:\mathbb{R}^n\to\mathbb{R}$,
+\begin{equation}
+E(\mtx{u}; \mtx{W}, \mtx{b})=\frac{1}{2}\mtx{u}^T\mtx{u}-\frac{1}{2}\mtx{\rho}(\mtx{u})^T \mtx{W} \mtx{\rho}(\mtx{u})-\mtx{b}^T\mtx{u}
+\label{eqn:energy}
+\end{equation}
+and arbitrary cost function $C:\mathbb{R}^r\to\mathbb{R}_{+}$; here and in \cite{scellier17} it is a quadratic cost function given by
+\begin{equation}
+\label{eqn:cost}
+C(\mtx{y})=\frac{1}{2}||\mtx{y}-\mtx{y}_d||_2^2,
+\end{equation}
+though the framework still works for cost functions incorporating a regularization term dependent on $\mtx{W}$ and $\mtx{b}$. The total energy function $F:\mathbb{R}^n\to\mathbb{R}$ is given by
+\begin{equation}
+F(\mtx{u}; \beta, \mtx{W}, \mtx{b})=E(\mtx{u};\mtx{W}, \mtx{b})+\beta C(\mtx{y})
+\label{eqn:total_energy}
+\end{equation}
+where the clamping factor $\beta$ is a small constant. $\mtx{s}$ evolves over time $t$ as
+\begin{equation}
+\label{eqn:dynamics}
+\frac{d\mtx{s}}{dt}\propto -\frac{\partial F}{\partial \mtx{s}}.
+\end{equation}
+Equilibrium has been reached when $\frac{\partial F}{\partial \mtx{s}} \approx 0$. This can be viewed as solving the optimization problem
+\begin{equation}
+	\minimize_{\mtx{s}\in\mathbb{R}^{q+r}}F((\mtx{x}_d^T,\mtx{s}^T)^T; \beta, \mtx{W}, \mtx{b}) 
+\end{equation}
+by using gradient descent to find a local minimum of $F$.
+\npar
+The procedure for training on a single input-output pair $(\mtx{x}_d,\mtx{y}_d)$ is as follows:
+\begin{enumerate}
+\item Clamp $\mtx{x}$ to $\mtx{x}_d$ and perform the free-phase evolution: evolve to equilibrium on the energy function $F(\mtx{u}; 0, \mtx{W}, \mtx{b})$ in a manner dictated by equation \ref{eqn:dynamics}. Record the equilibrium state $\mtx{u}^0$.
+\item Perform the weakly-clamped evolution: evolve to equilibrium on the energy function $F(\mtx{u}; \beta, \mtx{W}, \mtx{b})$ using $\mtx{u}^0$ as a starting point. Record the equilibrium state $\mtx{u}^{\beta}$.
+\item Compute the correction to each weight in the network: 
+\begin{equation}
+\label{eqn:weight_correction}
+\Delta W_{ij}=\frac{1}{\beta}(\rho(u_i^\beta)\rho(u_j^\beta)-\rho(u_i^0)\rho(u_j^0)).
+\end{equation}
+Adjust the weights using $W_{ij}\leftarrow W_{ij}+\alpha\Delta W_{ij}$ where the learning rate $\alpha$ is a positive constant.
+\item Compute the correction to each bias in the network:
+\begin{equation}
+\Delta b_i=\frac{1}{\beta}(\rho(u_i^{\beta})-\rho(u_i^0))
+\label{eqn:bias_correction}
+\end{equation}
+and adjust the biases using $b_i\leftarrow b_i+\alpha\Delta b_i$.
+\end{enumerate}
+This can be repeated on as many training examples as desired. Training can be done on batches by computing $\Delta W_{ij}$ and $\Delta b_i$ for each input-output pair in the batch, and correcting using the averages of these values. Note that the correction to a weight is computed using only the activations of neurons it directly affects, and the correction to a bias is computed using only the activation of the neuron it directly affects. This contrasts with backpropagation, where to correct a weight or bias $l$ layers from the output it is necessary to know the activations, derivatives and weights of all neurons between $0$ and $l-1$ layers from the output.
+
+
+\subsection{Comparing the computational complexity of equilibrium propagation and backpropagation}
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=\textwidth]{figures/eqp_bd.pdf}
+	\caption{Illustration of the functionality needed to implement equilibrium propagation in hardware. Black lines denote functionality needed in the free phase. Green lines denote functionality to correct parameters. Orange lines denote functionality needed only by output neurons, that is unique to the weakly-clamped phase. There is no functionality unique to the weakly-clamped phase that is needed by all neurons.}
+	\label{fig:eqp_bd}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=\textwidth]{figures/backprop_bd.pdf}
+	\caption{Illustration of the functionality needed to implement backpropagation in hardware. Black lines denote functionality needed in the forwards phase. Green lines denote functionality to correct parameters. Red lines denote functionality unique to the backwards phase that is needed by all neurons. Orange lines denote functionality needed only by output neurons, that is unique to the backwards phase.}
+	\label{fig:backprop_bd}
+\end{center}
+\end{figure}
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|L||L|L|}
+\hline 
+&Backpropagation & Equilibrium Propagation \\ \hline\hline
+Memory & Space to store activation and error term for each neuron & Space to store free and weakly-clamped activations for each neuron \\ \hline
+Nonlinear activation function & Yes & Yes \\ \hline
+Derivative of nonlinear activation function & Yes & Yes \\ \hline
+Number of distinct computations & 2 - computations during forwards and backwards phases are distinct & $\approx 1$ - hidden neurons perform same computation in both phases. Output neurons perform a similar but modified version of the same computation. \\ \hline
+Types of connections & Unidirectional to transmit activation to shallower neighbors and error to deeper neighbors & Bidirectional to each neighbor \\ \hline
+Correction computation & Corrections require dedicated circuitry unique from that implementing propagation & Corrections require dedicated circuitry unique from that implementing evolution \\ \hline
+Order of computations & Forwards propagation phase where layers are computed from deepest to shallowest; backwards propagation phase where layers are computed from shallowest to deepest; parameter update phase & Free phase where all neurons evolve simultaneously; weakly-clamped phase where all neurons evolve simultaneously; parameter update phase \\ \hline
+\end{tabular}
+\caption{}
+\label{table:bp_eqp_contrast}
+\end{center}
+\end{table}
+
+\subsubsection{Requirements of equilibrium propagation}
+
+It follows from equations \ref{eqn:energy}, \ref{eqn:total_energy} and \ref{eqn:dynamics} that to determine its state, the $i$-th neuron in a network must compute $$\frac{\partial F}{\partial u_i}=u_i-\frac{1}{2}\rho'(u_i)[\sum_{i\neq j}W_{ij}\rho(u_j)+b_i],$$ plus the term $\beta(u_i-y_i^{target})$ for output neurons when using a squared-error cost function, and then integrate the result over time. Parameter correction rules are given by equations \ref{eqn:weight_correction} and \ref{eqn:bias_correction}. A block diagram of this process is shown in figure \ref{fig:eqp_bd} and qualitatively describes one way equilibrium propagation could potentially be implemented in hardware.
+
+\subsubsection{Requirements of backpropagation}
+
+In backpropagation, the activation value of a neuron $i$ in layer $l$ is given by $$\rho(u_i^l)=\rho(\sum_jW_{ij}^lu_j^{l-1}+b_i^l).$$ Parameters are then updated by computing error correction terms $\delta_i^l$ for each neuron $i$ in layer $l$; for the output layer $L$ the correction is $$\delta_i^L=\rho'(u_i^L)(\rho(u_i^L)-y_i^{target})$$ and for deeper layers it is $$\delta_i^l=\rho'(u_i^l)\sum_jW_{ij}^{l+1}\delta_j^{l+1}.$$ Weights are corrected using $$\Delta W_{ij}^l=\rho(u_i^{l-1})\delta_j^l$$ and biases using $$\Delta b_i^l=\delta_i^l.$$ The block diagram in figure \ref{fig:backprop_bd} qualitatively describes a way this algorithm could potentially be implemented in hardware.
+
+\subsubsection{Comparison}
+
+The most-significant difference between the algorithms is that in equilibrium propagation, the free and weakly-clamped phases of training are identical for most neurons and the weakly-clamped phase requires only slight modification to output neurons, whereas in backpropagation these phases very different functionality from essentially all neurons. Another visible difference is that in equilibrium propagation each neuron corresponds to a single synapse whereas in backpropagation a neuron corresponds to two synapses; we do not expect this difference to be significant because a synapse in the former case a synapse takes as inputs the outputs of all neighboring neurons, whereas in the latter case each has inputs from either shallower or deeper neurons (about half as many). While neurons in equilibrium propagation explicitly write their states to memory after the free phase, in backpropagation the need for distinct state variables to hold the activation and error term of each neurons implies a need for the same amount of memory. Various characteristics of both algorithms are compared side-by-side in table \ref{table:bp_eqp_contrast}.
 
 \subsection{Vanishing gradient problem}
 \label{sec:vangrad}
@@ -162,6 +234,11 @@ To generate a network with our topology, we use algorithm \ref{alg:ourtop}. This
 \npar
 For these networks we use a global learning rate of .02 and, as in the networks from sections \ref{sec:basic_topology} and \ref{sec:basic_topology_uniform}, initialize connections between neurons in adjacent layers using the scheme from \cite{glorot2010}. For all other connections we draw initial weights from the uniform distribution $U[-.05, .05]$ where the value .05 was determined empirically to yield good results.
 
+\subsection{Deeper networks}
+\label{sec:deep_topology}
+
+To verify that trends hold for deeper networks, we did some limited experimentation on a network with 5 100-neuron hidden layers, with a single global learning rate as in section \ref{sec:basic_topology_uniform} and with our topology, $p=7.56\%$, as in section \ref{sec:our_topology}. For these experiments we drew added connections from $U[-.1, .1]$ and used a learning rate of $.01$; settings were otherwise the same as in preceding sections. These hyperparameters are likely sub-optimal.
+
 \section{Results}
 
 \begin{figure}
@@ -184,7 +261,7 @@ Figure \ref{fig:mnist_comparison} illustrates that our network significantly out
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{figures/MNIST_individual_layers.pdf}
-  \caption{Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref{sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (left) A layered network with a single global learning rate (section \ref{sec:basic_topology_uniform}). (center) A layered network a unique, individually-tuned learning rate for each layer (section \ref{sec:basic_topology}).  (right) A network with our topology, $p = 7.56\%$ (section \ref{sec:our_topology}). Observe that the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers.}  
+  \caption{Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref{sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (top left) A layered network with a single global learning rate (section \ref{sec:basic_topology_uniform}). (top center) A layered network a unique, individually-tuned learning rate for each layer (section \ref{sec:basic_topology}).  (top right) A network with our topology, $p = 7.56\%$ (section \ref{sec:our_topology}). (bottom left) A layered network with 5 100-neuron hidden layers and a single global learning rate (section \ref{sec:deep_topology}). (bottom right) A network with our topology, $p=7.56\%$, and 5 100-neuron hidden layers (section \ref{sec:deep_topology}). Observe that for the shallower networks the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers. For the deeper networks, the same trend is apparent but not as strong; we believe this is due to sub-optimal hyperparameter settings.}  
   \label{fig:mnist_layers}
 \end{figure}
 
@@ -193,18 +270,18 @@ To observe the extent of the vanishing gradient problem, for each network we tra
 The fast training of the output layer in the network with our topology is probably because no layer-skipping connections attach directly to the target output, so for any value of $p$ the shortest path between a deep neuron and the target layer is at least 2 connections long, whereas the path between an output neuron and the target layer is only 1 connection long.
 
 \subsection{Effect of $p$}
-%\label{sec:mnist_1epoch}
-%
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\columnwidth]{figures/MNIST_one_epoch_performance.pdf}
-%  \caption{Behavior of our network (section \ref{sec:our_topology}) with varying $p$, during the first epoch of training. (top) The training error after one epoch. (bottom) Root-mean-square correction to weights in different layers during the first epoch. Observe that as $p$ is increased, the error rate decreases and the root-mean-square corrections to each layer become more-uniform.}
-%  \label{fig:mnist_1epoch}
-%\end{figure}
-%
-We evaluated the behavior of our network during its first epoch of training on MNIST for varying $p$ and found that as $p$ increases, the error rate decreases and the root-mean-square corrections to each layer become more-uniform. We anticipate that generalization error will suffer for large $p$ as a network loses the benefits associated with a layered topology, but we did not train a large number of networks for long enough to observe such a trend. 
+\label{sec:mnist_1epoch}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{figures/MNIST_one_epoch_performance.pdf}
+  \caption{Behavior of our network (section \ref{sec:our_topology}) with varying $p$, during the first epoch of training. (top) The training error after one epoch. (bottom) Root-mean-square correction to weights in different layers during the first epoch. Observe that as $p$ is increased, the error rate decreases and the root-mean-square corrections to each layer become more-uniform.}
+  \label{fig:mnist_1epoch}
+\end{figure}
+
+We tracked the training error after one epoch of a network with our topology while varying $p$; the results are shown in figure \ref{fig:mnist_1epoch}. For $p<.1\%$, there is little improvement in the error rate as $p$ is increased, but there is substantial improvement in the uniformity of the training rates of deep layers. When $p>.1\%$, the deep layers are very uniform, and the error rate starts decreasing with $p$ at a rate that is slightly slower than exponential; at this point there is little improvement in the uniformity of deep layers, but the rate of the shallowest layer appears to move closer to those of the deeper layers.
 \npar
-We noticed that networks with our topology and $p=0\%$ perform poorly relative to layered networks with a global learning rate; we believe this is due to a sub-optimal weight initialization. Networks with our topology seem less-sensitive to weight initialization than layered networks.
+We found that our topology performs significantly worse than the basic topology with one learning rate when few connections are replaced. This could be due to a poor weight initialization scheme for the added intralayer connections; we have noticed anecdotally that networks appear to be less-sensitive to their weight initialization scheme as connections are replaced. We have found that networks perform poorly relative to a basic network with one learning rate until $p$ is in the ballpark of 7\%. This experiment suggests that training rate will keep improving long after that, but does not show long-term performance or test performance; we suspect that a network's generalization ability will suffer for large $p$ as it loses its regimented nature.
 
 \section{Related work}
 References \cite{lee2015, xie2003, pineda1987} describe other approaches to locally approximating the gradient of a cost function. References \cite{lillicrap2014, @crafton2019} explore the use of a random feedback matrix for backwards connections that is more biologically-plausible than identical forwards and backwards connections. Reference \cite{bartunov2018} explores the present state of biologically-motivated deep learning, and \cite{bengio2015} discusses the criteria a biologically-plausible network would need to satisfy. References \cite{shainline2019, davies2018, nahmias2013} discuss analog hardware that could potentially implement equilibrium propagation. References \cite{he2015, srivastava2015, xiaohu2011, krishnan2019} use layer-skipping connections for other types of networks and learning frameworks. References \cite{ioffe2015, glorot2010} give approaches to solving vanishing gradient problems.
