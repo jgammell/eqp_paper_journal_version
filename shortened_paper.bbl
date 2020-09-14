@@ -83,7 +83,7 @@ Ioffe, S. and Szegedy, C. (2015).
 \bibAnnoteFile{ioffe2015}
 
 \bibitem[{Krishnan et~al.(2019)Krishnan, Du, and Cao}]{krishnan2019}
-[Dataset] Krishnan, G., Du, X., and Cao, Y. (2019).
+Krishnan, G., Du, X., and Cao, Y. (2019).
 \newblock Structural pruning in deep neural networks: A small-world approach
 \bibAnnoteFile{krishnan2019}
 
@@ -101,8 +101,7 @@ Lee, D.-H., Zhang, S., Fischer, A., and Bengio, Y. (2015).
 
 \bibitem[{Lillicrap et~al.(2014)Lillicrap, Cownden, Tweed, and
   Akerman}]{lillicrap2014}
-[Dataset] Lillicrap, T.~P., Cownden, D., Tweed, D.~B., and Akerman, C.~J.
-  (2014).
+Lillicrap, T.~P., Cownden, D., Tweed, D.~B., and Akerman, C.~J. (2014).
 \newblock Random feedback weights support learning in deep neural networks
 \bibAnnoteFile{lillicrap2014}
 
@@ -123,7 +122,7 @@ Pineda, F. (1987).
 \bibAnnoteFile{pineda1987}
 
 \bibitem[{Scellier and Bengio(2016)}]{scellier17}
-[Dataset] Scellier, B. and Bengio, Y. (2016).
+Scellier, B. and Bengio, Y. (2016).
 \newblock Equilibrium propagation: Bridging the gap between energy-based models
   and backpropagation
 \bibAnnoteFile{scellier17}
@@ -145,7 +144,7 @@ Schmidhuber, J. (2015).
 \bibAnnoteFile{shainline2019}
 
 \bibitem[{Simonyan and Zisserman(2014)}]{simonyan2014}
-[Dataset] Simonyan, K. and Zisserman, A. (2014).
+Simonyan, K. and Zisserman, A. (2014).
 \newblock Very deep convolutional networks for large-scale image recognition
 \bibAnnoteFile{simonyan2014}
 
@@ -158,8 +157,7 @@ Srivastava, R.~K., Greff, K., and Schmidhuber, J. (2015{\natexlab{a}}).
 
 \bibitem[{Srivastava et~al.(2015{\natexlab{b}})Srivastava, Greff, and
   Schmidhuber}]{srivastava2015tvdn}
-[Dataset] Srivastava, R.~K., Greff, K., and Schmidhuber, J.
-  (2015{\natexlab{b}}).
+Srivastava, R.~K., Greff, K., and Schmidhuber, J. (2015{\natexlab{b}}).
 \newblock Training very deep networks
 \bibAnnoteFile{srivastava2015tvdn}
 

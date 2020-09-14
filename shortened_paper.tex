@@ -3,6 +3,7 @@
 \setcitestyle{square}
 \usepackage{url,hyperref,lineno,microtype,subcaption}
 \usepackage[onehalfspacing]{setspace}
+\usepackage[subtle]{savetrees}
 
 \usepackage{bm}
 \usepackage[ruled,vlined]{algorithm2e}
@@ -20,7 +21,7 @@
 \linenumbers
 
 \def\keyFont{\fontsize{8}{11}\helveticabold }
-\def\firstAuthorLast{Sample {et~al.}}
+\def\firstAuthorLast{Gammell {et~al.}}
 \def\Authors{Jimmy Gammell\,$^{1,*}$, Sae Woo Nam\,$^{1}$ and Adam N. McCaughan\,$^{1}$}
 \def\Address{$^{1}$National Institute of Standards and Technology, Boulder, CO, United States}
 \def\corrAuthor{Jimmy Gammell}
@@ -49,11 +50,17 @@ Equilibrium propagation is a learning framework that marks a step forward in the
 
 \tiny
  \keyFont{ \section{Keywords:} equilibrium propagation, deep learning, small-world, layer-skipping connections, neuromorphic computing, biologically-motivated}
+ 
+\noindent\textbf{Number of words:} 5137
+
+\noindent\textbf{Number of figures:} 7
+
+\noindent\textbf{Number of tables:} 1
 \end{abstract}
 
 \section{Introduction}
 
-Equilibrium propagation \cite{scellier17} is a learning framework for energy-based networks such as the continuous Hopfield network \citep{hopfield1984}. It is appealing relative to backpropagation because it is more biologically-plausible, and as a side-effect could be implemented more-easily in neuromorphic analog hardware.
+Equilibrium propagation \citep{scellier17} is a learning framework for energy-based networks such as the continuous Hopfield network \citep{hopfield1984}. It is appealing relative to backpropagation because it is more biologically-plausible, and as a side-effect could be implemented more-easily in neuromorphic analog hardware.
 
 Implementation of equilibrium propagation in \citep{scellier17} was hindered by a vanishing gradient problem whereby networks with as few as 3 hidden layers trained slowly on MNIST \citep{mnist1998} - a serious issue given that network depth is critical to performance on difficult datasets \citep{simonyan2014, srivastava2015tvdn} and that convergence to a low error rate on MNIST is a low bar to meet. The problem was overcome in \citep{scellier17} by independently tuning a unique learning rate for each layer in the network; however, this approach is unappealing because (1) it introduces additional hyperparameters to tune, (2) it would be inconvenient to implement in neuromorphic analog hardware, and (3) it has not been observed in biological systems.
 
@@ -61,14 +68,12 @@ The purpose of this paper is to demonstrate that in this context the vanishing g
 \footnote{This modification was inspired by small-world topology \citep{watts98}; however, we have not observed a strong correlation between network performance and common metrics of small-worldness (characteristic path length, clustering coefficient, small-world coefficient ).}
 Through this modification we have achieved 0\% training error (out of 50,000 examples) and $\lesssim$2.5\% test error (out of 10,000 examples) on MNIST using a network with three hidden layers and no regularization term in its cost function. These error rates are comparable to those of other biologically-motivated networks \citep{bartunov2018} and are roughly the same as those of the layered network with unique, manually-tuned learning rates in \citep{scellier17}. Our method could be implemented with relative ease in any system with configurable connectivity. Layer-skipping connections have been observed in biological brains \citep{bullmore2009}, so the approach is biologically-plausible. Similar techniques have seen success in convolutional \citep{he2015, srivastava2015} and multilayer feedforward \citep{xiaohu2011, krishnan2019} networks. Our findings outlined in this paper suggest that layer-skipping connections are effective-enough to be appealing in contexts where simplicity and biological plausibility are important.
 
-\section{Methods}
+\section{Background}
 
 \subsection{Equilibrium propagation}
 \label{sec:eqp_formulation}
 
-Similarly to backpropagation, equilibrium propagation \citep{scellier17} trains networks by approximating gradient descent on a cost function. Equilibrium propagation is applicable to any network with dynamics characterized by evolution to a fixed point of an associated energy function; our implementation is a recreation of that in \citep{scellier17}, which applies it to a continuous Hopfield network \citep{hopfield1984}. The mathematical formulation of the framework can be found in \citep{scellier17}.
-
-A major reason backpropagation is not biologically-plausible is that to implement it, each neuron would need two distinct mechanisms for information transmission: one to transmit its activation to shallower neurons during the forward-propagation phase, and another to transmit error-correction information to deeper neurons during the backward-propagation phase \citep{bengio2015}. While this is easy in a digital computer that can oversee and manipulate an entire network, it would be cumbersome in hardware (biological or otherwise) consisting of many simple, independent computational nodes with limited ability to share information. In contrast, equilibrium propagation consists of a free phase (comparable to forward-propagation) and a weakly-clamped phase (comparable to backward-propagation) during which each neuron only needs to know the activations of neighboring neurons, so only one mechanism for information transmission is needed \citep{scellier17}. In a similar vein, to implement backpropagation each neuron would need mechanisms to compute both an activation value using activations of deeper neurons and error-correction information using that of shallower neurons. For equilibrium propagation a neuron would only need the ability to compute an activation given those of adjacent neurons \citep{scellier17}.
+Similarly to backpropagation, equilibrium propagation \citep{scellier17} trains networks by approximating gradient descent on a cost function. Equilibrium propagation is applicable to any network with dynamics characterized by evolution to a fixed point of an associated energy function; our implementation is a recreation of that in \citep{scellier17}, which applies it to a continuous Hopfield network \citep{hopfield1984}. The mathematical formulation of the framework can be found in \citep{scellier17}. We discuss its appeal relative to backpropagation in section \ref{sec:comparison}.
 
 \subsubsection{Implementation in a continuous Hopfield network}
 
@@ -127,7 +132,7 @@ Vanishing gradients are problematic because they reduce a network's rate of trai
 
 The vanishing gradient problem is familiar in the context of conventional feedforward networks, where techniques such as the weight initialization scheme in \citep{glorot2010}, the use of activation functions with derivatives that do not lead to output saturation \citep{schmidhuber2015}, and batch normalization \citep{ioffe2015} have been effective at overcoming it. However, in the context of the networks trained in \citep{scellier17}, the vanishing gradient problem persists even when the former two techniques are used. To our knowledge batch normalization has not been used in the context of equilibrium propagation; however, it seems unlikely to be biologically-plausible.
 
-\subsection{Implementation}
+\section{Implementation}
 \label{sec:implementation}
 
 We recreated the equilibrium propagation implementation in \citep{scellier17} using the Pytorch library.
@@ -136,17 +141,17 @@ We recreated the equilibrium propagation implementation in \citep{scellier17} us
 
 We use two performance-enhancing techniques that were used in \citep{scellier17}: we randomize the sign of $\beta$ before training on each batch, which has a regularization effect, and we use persistent particles, where the state of the network after training on a given batch during epoch $n$ is used as the initial state for that batch during epoch $n+1$. Persistent particles reduce the computational resources needed to approximate the differential equation governing network evolution, and would be unnecessary in an analog implementation that can approximate the equation efficiently. Note that this technique leads to higher error rates early in training than would be present with a more-thorough approximation of the differential equation.
 
-\subsubsection{Layered topology with per-layer rates}
+\subsection{Layered topology with per-layer rates}
 \label{sec:basic_topology}
 
-We recreated the 5-layer network evaluated in \citep{scellier17}. It has the standard layered topology shown in \ref{fig:top_basic}, and consists of a 784-neuron input layer, 3 500-neuron hidden layers and a 10-neuron output layer. Weights are initialized using the scheme from \citep{glorot2010}. As mentioned above, each layer has a unique learning rate; the rates are $\alpha_1=.128$, $\alpha_2=.032$, $\alpha_3=.008$ and $\alpha_4=.002$ where $\alpha_i$ is the learning rate for the connection weights between layers $i$ and $i+1$ and for the biases in layer $i$, and the input and output layers are denoted $i=1$ and $i=5$, respectively.
+We recreated the 5-layer network evaluated in \citep{scellier17}. It has the standard layered topology shown in figure \ref{fig:top_basic}, and consists of a 784-neuron input layer, 3 500-neuron hidden layers and a 10-neuron output layer. Weights are initialized using the scheme from \citep{glorot2010}. As mentioned above, each layer has a unique learning rate; the rates are $\alpha_1=.128$, $\alpha_2=.032$, $\alpha_3=.008$ and $\alpha_4=.002$ where $\alpha_i$ is the learning rate for the connection weights between layers $i$ and $i+1$ and for the biases in layer $i$, and the input and output layers are denoted $i=1$ and $i=5$, respectively.
 
-\subsubsection{Layered topology with global learning rate}
+\subsection{Layered topology with global learning rate}
 \label{sec:basic_topology_uniform}
 
 To illustrate the vanishing gradient problem and provide a point of reference, we also tested the network in section \ref{sec:basic_topology} with a single global learning rate of .02.
 
-\subsubsection{Our topology}
+\subsection{Our topology}
 \label{sec:our_topology}
 
 \begin{algorithm}
@@ -200,6 +205,7 @@ We found that our topology performs significantly worse than the basic topology 
 \section{Discussion}
 
 \subsection{Comparing the computational complexity of equilibrium propagation and backpropagation}
+\label{sec:comparison}
 
 \subsubsection{Requirements of equilibrium propagation}
 
@@ -230,6 +236,8 @@ There are several directions in which future research could be taken:
 \section*{Conflict of Interest Statement}
 
 The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
+
+The U.S. Government is authorized to reproduce and distribute reprints for governmental purposes notwithstanding any copyright annotation thereon.
 %
 %\section*{Author Contributions}
 %
@@ -267,7 +275,7 @@ The authors declare that the research was conducted in the absence of any commer
 \begin{center}
 \includegraphics[width=\textwidth]{figures/MNIST_individual_layers.pdf}
 \end{center}
-\caption{Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref{sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (top left) A layered network with a single global learning rate (section \ref{sec:basic_topology_uniform}). (top center) A layered network a unique, individually-tuned learning rate for each layer (section \ref{sec:basic_topology}).  (top right) A network with our topology, $p = 7.56\%$ (section \ref{sec:our_topology}). (bottom left) A layered network with 5 100-neuron hidden layers and a single global learning rate (section \ref{sec:deep_topology}). (bottom right) A network with our topology, $p=7.56\%$, and 5 100-neuron hidden layers (section \ref{sec:deep_topology}). Observe that for the shallower networks the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers. For the deeper networks, the same trend is apparent but not as strong; we believe this is due to sub-optimal hyperparameter settings.}   \label{fig:mnist_layers}
+\caption{Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref{sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (left) A layered network with a single global learning rate (section \ref{sec:basic_topology_uniform}). (center) A layered network a unique, individually-tuned learning rate for each layer (section \ref{sec:basic_topology}).  (right) A network with our topology, $p = 7.56\%$ (section \ref{sec:our_topology}).Observe that the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers.}   \label{fig:mnist_layers}
 \end{figure}
 \begin{figure}[h!]
 \begin{center}
@@ -303,7 +311,7 @@ Correction computation & Corrections require dedicated circuitry unique from tha
 Order of computations & Forwards propagation phase where layers are computed from deepest to shallowest; backwards propagation phase where layers are computed from shallowest to deepest; parameter update phase & Free phase where all neurons evolve simultaneously; weakly-clamped phase where all neurons evolve simultaneously; parameter update phase \\ \hline
 \end{tabular}
 \end{center}
-\caption{} \label{table:bp_eqp_contrast}
+\caption{Comparison of the capabilities a hardware neuron would need in order to implement backpropagation and equilibrium propagation.} \label{table:bp_eqp_contrast}
 \end{table}
 
 \end{document}
