@@ -1,0 +1,18 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Methods}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Equilibrium propagation}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Implementation in a continuous Hopfield network}{subsection.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Vanishing gradient problem}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Implementation}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Layered topology with per-layer rates}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Layered topology with global learning rate}{subsection.2.3}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Our topology}{subsection.2.3}% 9
+\BOOKMARK [1][-]{section.3}{Results}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Network performance comparison}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Training rates of individual pairs of layers}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Effect of p}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Comparing the computational complexity of equilibrium propagation and backpropagation}{section.4}% 15
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Comparison}{subsection.4.1}% 16
+\BOOKMARK [2][-]{subsection.4.2}{Related work}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.3}{Directions for Future Research}{section.4}% 18

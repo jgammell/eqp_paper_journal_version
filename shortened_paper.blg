@@ -1,50 +1,51 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: shortened_paper.aux
-Reallocating 'name_of_file' (item size: 1) to 6 items.
-The style file: plain.bst
-Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+The style file: frontiersinSCNS_ENG_HUMS.bst
+Reallocating 'name_of_file' (item size: 1) to 15 items.
 Database file #1: references.bib
-Warning--empty booktitle in lee2015
-You've used 24 entries,
-            2118 wiz_defined-function locations,
-            630 strings with 8050 characters,
-and the built_in function-call counts, 7778 in all, are:
-= -- 711
-> -- 477
-< -- 3
-+ -- 189
-- -- 162
-* -- 549
-:= -- 1350
-add.period$ -- 67
-call.type$ -- 24
-change.case$ -- 152
-chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 259
-empty$ -- 555
-format.name$ -- 162
-if$ -- 1582
-int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 18
-newline$ -- 117
-num.names$ -- 50
-pop$ -- 165
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Warning--empty pages in xiaohu2011
+You've used 13 entries,
+            3029 wiz_defined-function locations,
+            671 strings with 6734 characters,
+and the built_in function-call counts, 7410 in all, are:
+= -- 599
+> -- 431
+< -- 6
++ -- 207
+- -- 115
+* -- 532
+:= -- 1137
+add.period$ -- 22
+call.type$ -- 13
+change.case$ -- 105
+chr.to.int$ -- 14
+cite$ -- 27
+duplicate$ -- 492
+empty$ -- 471
+format.name$ -- 161
+if$ -- 1460
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 105
+newline$ -- 88
+num.names$ -- 52
+pop$ -- 286
 preamble$ -- 1
-purify$ -- 128
+purify$ -- 90
 quote$ -- 0
-skip$ -- 212
+skip$ -- 266
 stack$ -- 0
-substring$ -- 316
-swap$ -- 45
-text.length$ -- 3
+substring$ -- 168
+swap$ -- 217
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 117
 warning$ -- 1
-while$ -- 62
-width$ -- 26
-write$ -- 247
+while$ -- 40
+width$ -- 0
+write$ -- 184
 (There was 1 warning)
