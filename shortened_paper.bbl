@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -34,6 +34,16 @@ Bullmore, E. and Sporns, O. (2009).
 \newblock \emph{Nature}
 \bibAnnoteFile{bullmore2009}
 
+\bibitem[{Glorot and Bengio(2010)}]{glorot2010}
+Glorot, X. and Bengio, Y. (2010).
+\newblock Understanding the difficulty of training deep feedforward neural
+  networks.
+\newblock In \emph{Proceedings of the Thirteenth International Conference on
+  Artificial Intelligence and Statistics}, eds. Y.~W. Teh and M.~Titterington
+  (Chia Laguna Resort, Sardinia, Italy: PMLR), vol.~9 of \emph{Proceedings of
+  Machine Learning Research}, 249--256
+\bibAnnoteFile{glorot2010}
+
 \bibitem[{He et~al.(2015)He, Zhang, Ren, and Sun}]{he2015}
 He, K., Zhang, X., Ren, S., and Sun, J. (2015).
 \newblock Deep residual learning for image recognition.
@@ -48,6 +58,13 @@ Hopfield, J. (1984).
   States of America} 81, 3088--92.
 \newblock \doi{10.1073/pnas.81.10.3088}
 \bibAnnoteFile{hopfield1984}
+
+\bibitem[{Ioffe and Szegedy(2015)}]{ioffe2015}
+Ioffe, S. and Szegedy, C. (2015).
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock \emph{CoRR} abs/1502.03167
+\bibAnnoteFile{ioffe2015}
 
 \bibitem[{Krishnan et~al.(2019)Krishnan, Du, and Cao}]{krishnan2019}
 [Dataset] Krishnan, G., Du, X., and Cao, Y. (2019).
@@ -64,6 +81,13 @@ Hopfield, J. (1984).
 \newblock Equilibrium propagation: Bridging the gap between energy-based models
   and backpropagation
 \bibAnnoteFile{scellier17}
+
+\bibitem[{Schmidhuber(2015)}]{schmidhuber2015}
+Schmidhuber, J. (2015).
+\newblock Deep learning in neural networks: An overview.
+\newblock \emph{Neural Networks} 61, 85–117.
+\newblock \doi{10.1016/j.neunet.2014.09.003}
+\bibAnnoteFile{schmidhuber2015}
 
 \bibitem[{Simonyan and Zisserman(2014)}]{simonyan2014}
 [Dataset] Simonyan, K. and Zisserman, A. (2014).
