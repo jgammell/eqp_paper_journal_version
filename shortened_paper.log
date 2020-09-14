@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  13 SEP 2020 19:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  13 SEP 2020 20:05
 entering extended mode
 **./shortened_paper.tex
 (shortened_paper.tex
@@ -852,151 +852,160 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [7]
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 223.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 224.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 224.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 224.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 224.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 224.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 224.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 224.
 
 (shortened_paper.bbl
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [8])
-<figures/basic_topology_illustration.pdf, id=293, 819.06pt x 534.07532pt>
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+
+[9]
+<figures/basic_topology_illustration.pdf, id=339, 653.56169pt x 454.57831pt>
 File: figures/basic_topology_illustration.pdf Graphic file (type pdf)
 <use figures/basic_topology_illustration.pdf>
 Package pdftex.def Info: figures/basic_topology_illustration.pdf  used on input
- line 248.
-(pdftex.def)             Requested size: 504.0pt x 328.64587pt.
-<figures/topology_changes_illustration.pdf, id=296, 819.06pt x 534.07532pt>
+ line 250.
+(pdftex.def)             Requested size: 504.0pt x 350.5674pt.
+<figures/topology_changes_illustration.pdf, id=342, 653.56169pt x 452.6511pt>
 File: figures/topology_changes_illustration.pdf Graphic file (type pdf)
 <use figures/topology_changes_illustration.pdf>
 Package pdftex.def Info: figures/topology_changes_illustration.pdf  used on inp
-ut line 254.
-(pdftex.def)             Requested size: 504.0pt x 328.64587pt.
+ut line 256.
+(pdftex.def)             Requested size: 504.0pt x 349.08115pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_network_comparison.pdf, id=298, 289.08pt x 178.66502pt>
+<figures/MNIST_network_comparison.pdf, id=344, 289.08pt x 178.66502pt>
 File: figures/MNIST_network_comparison.pdf Graphic file (type pdf)
 <use figures/MNIST_network_comparison.pdf>
 Package pdftex.def Info: figures/MNIST_network_comparison.pdf  used on input li
-ne 260.
+ne 262.
 (pdftex.def)             Requested size: 504.0pt x 311.51256pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_individual_layers.pdf, id=303, 416.17638pt x 319.4147pt>
+<figures/MNIST_individual_layers.pdf, id=349, 281.7542pt x 201.24745pt>
 File: figures/MNIST_individual_layers.pdf Graphic file (type pdf)
 <use figures/MNIST_individual_layers.pdf>
 Package pdftex.def Info: figures/MNIST_individual_layers.pdf  used on input lin
-e 266.
-(pdftex.def)             Requested size: 504.0pt x 386.83414pt.
+e 268.
+(pdftex.def)             Requested size: 504.0pt x 359.99423pt.
 
-LaTeX Warning: Reference `sec:deep_topology' on page 9 undefined on input line 
-268.
+LaTeX Warning: Reference `sec:deep_topology' on page 10 undefined on input line
+ 270.
 
 
-LaTeX Warning: Reference `sec:deep_topology' on page 9 undefined on input line 
-268.
+LaTeX Warning: Reference `sec:deep_topology' on page 10 undefined on input line
+ 270.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_one_epoch_performance.pdf, id=308, 289.08pt x 178.66502pt>
+<figures/MNIST_one_epoch_performance.pdf, id=354, 289.08pt x 178.66502pt>
 File: figures/MNIST_one_epoch_performance.pdf Graphic file (type pdf)
 <use figures/MNIST_one_epoch_performance.pdf>
 Package pdftex.def Info: figures/MNIST_one_epoch_performance.pdf  used on input
- line 272.
+ line 274.
 (pdftex.def)             Requested size: 504.0pt x 311.51256pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/eqp_bd.pdf, id=310, 971.54968pt x 731.8542pt>
+<figures/eqp_bd.pdf, id=356, 971.54968pt x 731.8542pt>
 File: figures/eqp_bd.pdf Graphic file (type pdf)
 <use figures/eqp_bd.pdf>
-Package pdftex.def Info: figures/eqp_bd.pdf  used on input line 278.
+Package pdftex.def Info: figures/eqp_bd.pdf  used on input line 280.
 (pdftex.def)             Requested size: 504.0pt x 379.66183pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/backprop_bd.pdf, id=311, 1048.87856pt x 724.62718pt>
+<figures/backprop_bd.pdf, id=357, 1048.87856pt x 724.62718pt>
 File: figures/backprop_bd.pdf Graphic file (type pdf)
 <use figures/backprop_bd.pdf>
-Package pdftex.def Info: figures/backprop_bd.pdf  used on input line 284.
+Package pdftex.def Info: figures/backprop_bd.pdf  used on input line 286.
 (pdftex.def)             Requested size: 504.0pt x 348.19302pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package caption Warning: Unused \captionsetup[sub] on input line 5.
-See the caption package documentation for explanation.
-
-
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[9 <./figures/basic_topology_illustration.pdf>]
+[10
+
+ <./figures/basic_topology_illustration.pdf
+
+pdfTeX warning: pdflatex (file ./figures/basic_topology_illustration.pdf): PDF 
+inclusion: invalid other resource which is no dict (key 'ProcSets', type <array
+>); ignored.
+>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[10 <./figures/topology_changes_illustration.pdf>]
+[11 <./figures/topology_changes_illustration.pdf
+
+pdfTeX warning: pdflatex (file ./figures/topology_changes_illustration.pdf): PD
+F inclusion: invalid other resource which is no dict (key 'ProcSets', type <arr
+ay>); ignored.
+>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[11 <./figures/MNIST_network_comparison.pdf>]
+[12 <./figures/MNIST_network_comparison.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[12 <./figures/MNIST_individual_layers.pdf>]
+[13 <./figures/MNIST_individual_layers.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[13 <./figures/MNIST_one_epoch_performance.pdf>]
+[14 <./figures/MNIST_one_epoch_performance.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[14 <./figures/eqp_bd.pdf
+[15 <./figures/eqp_bd.pdf
 
 pdfTeX warning: pdflatex (file ./figures/eqp_bd.pdf): PDF inclusion: invalid ot
 her resource which is no dict (key 'ProcSets', type <array>); ignored.
@@ -1007,23 +1016,27 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[15 <./figures/backprop_bd.pdf
+[16 <./figures/backprop_bd.pdf
 
 pdfTeX warning: pdflatex (file ./figures/backprop_bd.pdf): PDF inclusion: inval
 id other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package caption Warning: Unused \captionsetup[sub] on input line 5.
+See the caption package documentation for explanation.
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
+[17
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
  (shortened_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
 Package rerunfilecheck Info: File `shortened_paper.out' has not changed.
 (rerunfilecheck)             Checksum: CF3D19512A5FDD6A7DBA051F6C4CA1FA;1534.
 
@@ -1036,11 +1049,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15126 strings out of 481199
- 237571 string characters out of 2915349
- 586750 words of memory out of 3000000
- 30120 multiletter control sequences out of 15000+200000
- 591250 words of font info for 251 fonts, out of 3000000 for 9000
+ 15175 strings out of 481199
+ 238302 string characters out of 2915349
+ 584037 words of memory out of 3000000
+ 30153 multiletter control sequences out of 15000+200000
+ 591604 words of font info for 256 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  63i,13n,101p,1486b,552s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
@@ -1067,9 +1080,9 @@ bo8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/f
 onts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/
 utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on shortened_paper.pdf (16 pages, 801519 bytes).
+Output written on shortened_paper.pdf (17 pages, 792430 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
+ 687 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
  42185 words of extra memory for PDF output out of 42996 (max. 10000000)
 

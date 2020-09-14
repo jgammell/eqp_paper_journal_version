@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -33,6 +33,22 @@ Bullmore, E. and Sporns, O. (2009).
   functional systems.
 \newblock \emph{Nature}
 \bibAnnoteFile{bullmore2009}
+
+\bibitem[{Crafton et~al.(2019)Crafton, Parihar, Gebhardt, and
+  Raychowdhury}]{crafton2019}
+Crafton, B., Parihar, A., Gebhardt, E., and Raychowdhury, A. (2019).
+\newblock Direct feedback alignment with sparse connections for local learning.
+\newblock \emph{CoRR} abs/1903.02083
+\bibAnnoteFile{crafton2019}
+
+\bibitem[{Davies et~al.(2018)Davies, Srinivasa, Lin, Chinya, Joshi, Lines
+  et~al.}]{davies2018}
+Davies, M., Srinivasa, N., Lin, T.-H., Chinya, G., Joshi, P., Lines, A., et~al.
+  (2018).
+\newblock Loihi: A neuromorphic manycore processor with on-chip learning.
+\newblock \emph{IEEE Micro} PP, 1--1.
+\newblock \doi{10.1109/MM.2018.112130359}
+\bibAnnoteFile{davies2018}
 
 \bibitem[{Glorot and Bengio(2010)}]{glorot2010}
 Glorot, X. and Bengio, Y. (2010).
@@ -76,6 +92,36 @@ Ioffe, S. and Szegedy, C. (2015).
 \newblock The mnist database of handwritten digits
 \bibAnnoteFile{mnist1998}
 
+\bibitem[{Lee et~al.(2015)Lee, Zhang, Fischer, and Bengio}]{lee2015}
+Lee, D.-H., Zhang, S., Fischer, A., and Bengio, Y. (2015).
+\newblock Difference target propagation.
+\newblock 498--515.
+\newblock \doi{10.1007/978-3-319-23528-8_31}
+\bibAnnoteFile{lee2015}
+
+\bibitem[{Lillicrap et~al.(2014)Lillicrap, Cownden, Tweed, and
+  Akerman}]{lillicrap2014}
+[Dataset] Lillicrap, T.~P., Cownden, D., Tweed, D.~B., and Akerman, C.~J.
+  (2014).
+\newblock Random feedback weights support learning in deep neural networks
+\bibAnnoteFile{lillicrap2014}
+
+\bibitem[{Nahmias et~al.(2013)Nahmias, Shastri, Tait, and
+  Prucnal}]{nahmias2013}
+Nahmias, M., Shastri, B., Tait, A., and Prucnal, P. (2013).
+\newblock A leaky integrate-and-fire laser neuron for ultrafast cognitive
+  computing.
+\newblock \emph{Selected Topics in Quantum Electronics, IEEE Journal of} 19,
+  1--12.
+\newblock \doi{10.1109/JSTQE.2013.2257700}
+\bibAnnoteFile{nahmias2013}
+
+\bibitem[{Pineda(1987)}]{pineda1987}
+Pineda, F. (1987).
+\newblock Generalization of back-propagation to recurrent neural networks.
+\newblock \emph{Physical Review Letters} 59, 2229--2232
+\bibAnnoteFile{pineda1987}
+
 \bibitem[{Scellier and Bengio(2016)}]{scellier17}
 [Dataset] Scellier, B. and Bengio, Y. (2016).
 \newblock Equilibrium propagation: Bridging the gap between energy-based models
@@ -88,6 +134,15 @@ Schmidhuber, J. (2015).
 \newblock \emph{Neural Networks} 61, 85–117.
 \newblock \doi{10.1016/j.neunet.2014.09.003}
 \bibAnnoteFile{schmidhuber2015}
+
+\bibitem[{{Shainline} et~al.(2019){Shainline}, {Buckley}, {McCaughan},
+  {Chiles}, {Jafari Salim}, {Castellanos-Beltran} et~al.}]{shainline2019}
+{Shainline}, J.~M., {Buckley}, S.~M., {McCaughan}, A.~N., {Chiles}, J.~T.,
+  {Jafari Salim}, A., {Castellanos-Beltran}, M., et~al. (2019).
+\newblock {Superconducting optoelectronic loop neurons}.
+\newblock \emph{Journal of Applied Physics} 126, 044902.
+\newblock \doi{10.1063/1.5096403}
+\bibAnnoteFile{shainline2019}
 
 \bibitem[{Simonyan and Zisserman(2014)}]{simonyan2014}
 [Dataset] Simonyan, K. and Zisserman, A. (2014).
@@ -122,5 +177,13 @@ Xiaohu, L., Xiaoling, L., Jinhua, Z., Yulin, Z., and Maolin, L. (2011).
 \newblock In \emph{2011 IEEE International Conference on Computer Science and
   Automation Engineering}
 \bibAnnoteFile{xiaohu2011}
+
+\bibitem[{Xie and Seung(2003)}]{xie2003}
+Xie, X. and Seung, H. (2003).
+\newblock Equivalence of backpropagation and contrastive hebbian learning in a
+  layered network.
+\newblock \emph{Neural computation} 15, 441--54.
+\newblock \doi{10.1162/089976603762552988}
+\bibAnnoteFile{xie2003}
 
 \end{thebibliography}

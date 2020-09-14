@@ -214,7 +214,8 @@ In backpropagation, the activation value of a neuron $i$ in layer $l$ is given b
 The most-significant difference between the algorithms is that in equilibrium propagation, the free and weakly-clamped phases of training are identical for most neurons and the weakly-clamped phase requires only slight modification to output neurons, whereas in backpropagation these phases very different functionality from essentially all neurons. Another visible difference is that in equilibrium propagation each neuron corresponds to a single synapse whereas in backpropagation a neuron corresponds to two synapses; we do not expect this difference to be significant because a synapse in the former case a synapse takes as inputs the outputs of all neighboring neurons, whereas in the latter case each has inputs from either shallower or deeper neurons (about half as many). While neurons in equilibrium propagation explicitly write their states to memory after the free phase, in backpropagation the need for distinct state variables to hold the activation and error term of each neurons implies a need for the same amount of memory. Various characteristics of both algorithms are compared side-by-side in table \ref{table:bp_eqp_contrast}.
 
 \subsection{Related work}
-%References \citep{lee2015, xie2003, pineda1987} describe other approaches to locally approximating the gradient of a cost function. References \citep{lillicrap2014, @crafton2019} explore the use of a random feedback matrix for backwards connections that is more biologically-plausible than identical forwards and backwards connections. Reference \citep{bartunov2018} explores the present state of biologically-motivated deep learning, and \citep{bengio2015} discusses the criteria a biologically-plausible network would need to satisfy. References \citep{shainline2019, davies2018, nahmias2013} discuss analog hardware that could potentially implement equilibrium propagation. References \citep{he2015, srivastava2015, xiaohu2011, krishnan2019} use layer-skipping connections for other types of networks and learning frameworks. References \citep{ioffe2015, glorot2010} give approaches to solving vanishing gradient problems.
+
+References \citep{lee2015, xie2003, pineda1987} describe other approaches to locally approximating the gradient of a cost function. References \citep{lillicrap2014, crafton2019} explore the use of a random feedback matrix for backwards connections that is more biologically-plausible than identical forwards and backwards connections. Reference \citep{bartunov2018} explores the present state of biologically-motivated deep learning, and \citep{bengio2015} discusses the criteria a biologically-plausible network would need to satisfy. References \citep{shainline2019, davies2018, nahmias2013} discuss analog hardware that could potentially implement equilibrium propagation. References \citep{he2015, srivastava2015, xiaohu2011, krishnan2019} use layer-skipping connections for other types of networks and learning frameworks. References \citep{ioffe2015, glorot2010} give approaches to solving vanishing gradient problems.
 
 \subsection{Directions for Future Research}
 
@@ -241,6 +242,7 @@ The authors declare that the research was conducted in the absence of any commer
 
 \bibliography{references.bib}
 
+\clearpage
 \section*{Figures}
 
 \begin{figure}[h!]
@@ -257,19 +259,19 @@ The authors declare that the research was conducted in the absence of any commer
 \end{figure}
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=\columnwidth]{figures/MNIST_network_comparison.pdf}
+\includegraphics[width=\textwidth]{figures/MNIST_network_comparison.pdf}
 \end{center}
 \caption{Performance on MNIST of the networks in section \ref{sec:implementation}. Dashed lines show the test error and solid lines show the training error. In green is a layered network with a global learning rate (section \ref{sec:basic_topology_uniform}), in orange is a layered network with per-layer rates individually tuned to counter the vanishing gradient problem (section \ref{sec:basic_topology}), and in green is a network with our topology, $p=7.56\%$ (section \ref{sec:our_topology}). Observe that our topology is almost as effective as per-layer rates at countering the vanishing gradient problem that impedes training of the layered network with a global learning rate.} \label{fig:mnist_comparison}
 \end{figure}
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=\columnwidth]{figures/MNIST_individual_layers.pdf}
+\includegraphics[width=\textwidth]{figures/MNIST_individual_layers.pdf}
 \end{center}
 \caption{Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref{sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (top left) A layered network with a single global learning rate (section \ref{sec:basic_topology_uniform}). (top center) A layered network a unique, individually-tuned learning rate for each layer (section \ref{sec:basic_topology}).  (top right) A network with our topology, $p = 7.56\%$ (section \ref{sec:our_topology}). (bottom left) A layered network with 5 100-neuron hidden layers and a single global learning rate (section \ref{sec:deep_topology}). (bottom right) A network with our topology, $p=7.56\%$, and 5 100-neuron hidden layers (section \ref{sec:deep_topology}). Observe that for the shallower networks the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers. For the deeper networks, the same trend is apparent but not as strong; we believe this is due to sub-optimal hyperparameter settings.}   \label{fig:mnist_layers}
 \end{figure}
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=\columnwidth]{figures/MNIST_one_epoch_performance.pdf}
+\includegraphics[width=\textwidth]{figures/MNIST_one_epoch_performance.pdf}
 \end{center}
 \caption{Behavior of our network (section \ref{sec:our_topology}) with varying $p$, during the first epoch of training. (top) The training error after one epoch. (bottom) Root-mean-square correction to weights in different layers during the first epoch. Observe that as $p$ is increased, the error rate decreases and the root-mean-square corrections to each layer become more-uniform.} \label{fig:mnist_1epoch}
 \end{figure}
@@ -285,7 +287,7 @@ The authors declare that the research was conducted in the absence of any commer
 \end{center}
 \caption{Illustration of the functionality needed to implement backpropagation in hardware. Black lines denote functionality needed in the forwards phase. Green lines denote functionality to correct parameters. Red lines denote functionality unique to the backwards phase that is needed by all neurons. Orange lines denote functionality needed only by output neurons, that is unique to the backwards phase.} \label{fig:backprop_bd}
 \end{figure}
-
+\clearpage
 \section*{Tables}
 \begin{table}[h!]
 \begin{center}

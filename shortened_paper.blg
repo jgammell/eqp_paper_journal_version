@@ -6,46 +6,47 @@ The style file: frontiersinSCNS_ENG_HUMS.bst
 Reallocating 'name_of_file' (item size: 1) to 15 items.
 Database file #1: references.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Warning--empty booktitle in lee2015
 Warning--empty pages in xiaohu2011
-You've used 16 entries,
+You've used 24 entries,
             3029 wiz_defined-function locations,
-            696 strings with 7376 characters,
-and the built_in function-call counts, 9322 in all, are:
-= -- 761
-> -- 495
-< -- 10
-+ -- 233
-- -- 132
-* -- 669
-:= -- 1415
-add.period$ -- 29
-call.type$ -- 16
-change.case$ -- 127
-chr.to.int$ -- 17
-cite$ -- 33
-duplicate$ -- 639
-empty$ -- 625
-format.name$ -- 190
-if$ -- 1857
+            751 strings with 9053 characters,
+and the built_in function-call counts, 15150 in all, are:
+= -- 1244
+> -- 862
+< -- 12
++ -- 417
+- -- 231
+* -- 1086
+:= -- 2277
+add.period$ -- 49
+call.type$ -- 24
+change.case$ -- 200
+chr.to.int$ -- 25
+cite$ -- 50
+duplicate$ -- 1002
+empty$ -- 986
+format.name$ -- 313
+if$ -- 3045
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 136
-newline$ -- 107
-num.names$ -- 66
-pop$ -- 341
+missing$ -- 221
+newline$ -- 159
+num.names$ -- 98
+pop$ -- 525
 preamble$ -- 1
-purify$ -- 107
+purify$ -- 172
 quote$ -- 0
-skip$ -- 328
+skip$ -- 572
 stack$ -- 0
-substring$ -- 257
-swap$ -- 298
+substring$ -- 445
+swap$ -- 478
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 144
-warning$ -- 1
-while$ -- 54
+type$ -- 216
+warning$ -- 2
+while$ -- 85
 width$ -- 0
-write$ -- 230
-(There was 1 warning)
+write$ -- 349
+(There were 2 warnings)
