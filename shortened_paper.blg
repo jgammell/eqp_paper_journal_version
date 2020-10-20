@@ -5,6 +5,9 @@ Reallocating 'name_of_file' (item size: 1) to 25 items.
 The style file: frontiersinSCNS_ENG_HUMS.bst
 Reallocating 'name_of_file' (item size: 1) to 15 items.
 Database file #1: references.bib
+Warning--I didn't find a database entry for "Indiveri"
+Warning--I didn't find a database entry for "BrainScaleS"
+Warning--I didn't find a database entry for "NewEquilibriumPropPaper"
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty journal in krishnan2019
 Warning--empty booktitle in lee2015
@@ -15,7 +18,7 @@ Warning--empty journal in srivastava2015tvdn
 Warning--empty pages in xiaohu2011
 You've used 24 entries,
             3029 wiz_defined-function locations,
-            751 strings with 9053 characters,
+            757 strings with 9137 characters,
 and the built_in function-call counts, 15315 in all, are:
 = -- 1244
 > -- 862
@@ -54,4 +57,4 @@ warning$ -- 7
 while$ -- 85
 width$ -- 0
 write$ -- 344
-(There were 7 warnings)
+(There were 10 warnings)

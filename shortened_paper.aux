@@ -18,13 +18,13 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{scellier17}
 \citation{hopfield1984}
+\providecommand \oddpage@label [2]{}
+\oddpage@label{1}{1}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \citation{scellier17}
 \citation{mnist1998}
 \citation{simonyan2014,srivastava2015tvdn}
 \citation{scellier17}
-\providecommand \oddpage@label [2]{}
-\oddpage@label{1}{1}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \citation{watts98}
 \citation{bartunov2018}
 \citation{scellier17}
@@ -41,14 +41,13 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {{2.1}}Equilibrium propagation}{2}{subsection.2.1}\protected@file@percent }
 \newlabel{sec:eqp_formulation}{{{2.1}}{2}{Equilibrium propagation}{subsection.2.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {{{2.1}.1}}Implementation in a continuous Hopfield network}{2}{subsubsection.2.1.1}\protected@file@percent }
-\newlabel{eqn:hardened_sigmoid}{{1}{2}{Implementation in a continuous Hopfield network}{equation.2.1}{}}
 \citation{scellier17}
+\newlabel{eqn:hardened_sigmoid}{{1}{3}{Implementation in a continuous Hopfield network}{equation.2.1}{}}
 \newlabel{eqn:energy}{{2}{3}{Implementation in a continuous Hopfield network}{equation.2.2}{}}
 \newlabel{eqn:cost}{{3}{3}{Implementation in a continuous Hopfield network}{equation.2.3}{}}
 \newlabel{eqn:total_energy}{{4}{3}{Implementation in a continuous Hopfield network}{equation.2.4}{}}
 \newlabel{eqn:dynamics}{{5}{3}{Implementation in a continuous Hopfield network}{equation.2.5}{}}
 \newlabel{eqn:weight_correction}{{7}{3}{Implementation in a continuous Hopfield network}{equation.2.7}{}}
-\newlabel{eqn:bias_correction}{{8}{3}{Implementation in a continuous Hopfield network}{equation.2.8}{}}
 \citation{glorot2010}
 \citation{schmidhuber2015}
 \citation{ioffe2015}
@@ -57,18 +56,18 @@
 \citation{scellier17}
 \citation{mnist1998}
 \citation{scellier17}
-\citation{scellier17}
-\citation{glorot2010}
+\newlabel{eqn:bias_correction}{{8}{4}{Implementation in a continuous Hopfield network}{equation.2.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{2.2}}Vanishing gradient problem}{4}{subsection.2.2}\protected@file@percent }
 \newlabel{sec:vangrad}{{{2.2}}{4}{Vanishing gradient problem}{subsection.2.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Implementation}{4}{section.3}\protected@file@percent }
 \newlabel{sec:implementation}{{3}{4}{Implementation}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {{3.1}}Layered topology with per-layer rates}{4}{subsection.3.1}\protected@file@percent }
-\newlabel{sec:basic_topology}{{{3.1}}{4}{Layered topology with per-layer rates}{subsection.3.1}{}}
+\citation{scellier17}
+\citation{glorot2010}
 \citation{watts98}
 \citation{glorot2010}
 \citation{mnist1998}
-\citation{mnist1998}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{3.1}}Layered topology with per-layer rates}{5}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:basic_topology}{{{3.1}}{5}{Layered topology with per-layer rates}{subsection.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{3.2}}Layered topology with global learning rate}{5}{subsection.3.2}\protected@file@percent }
 \newlabel{sec:basic_topology_uniform}{{{3.2}}{5}{Layered topology with global learning rate}{subsection.3.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{3.3}}Our topology}{5}{subsection.3.3}\protected@file@percent }
@@ -76,9 +75,10 @@
 \@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Algorithm to produce our topology\relax }}{5}{algocf.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{alg:ourtop}{{1}{5}{Our topology}{algocf.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{5}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {{4.1}}Network performance comparison}{5}{subsection.4.1}\protected@file@percent }
-\newlabel{sec:network_performance}{{{4.1}}{5}{Network performance comparison}{subsection.4.1}{}}
+\citation{mnist1998}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{6}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {{4.1}}Network performance comparison}{6}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:network_performance}{{{4.1}}{6}{Network performance comparison}{subsection.4.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{4.2}}Training rates of individual pairs of layers}{6}{subsection.4.2}\protected@file@percent }
 \newlabel{sec:mnist_perlayer}{{{4.2}}{6}{Training rates of individual pairs of layers}{subsection.4.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{4.3}}Effect of $p$}{6}{subsection.4.3}\protected@file@percent }
@@ -86,7 +86,10 @@
 \@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{6}{section.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {{5.1}}Comparing the computational complexity of equilibrium propagation and backpropagation}{6}{subsection.5.1}\protected@file@percent }
 \newlabel{sec:comparison}{{{5.1}}{6}{Comparing the computational complexity of equilibrium propagation and backpropagation}{subsection.5.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{5.1}.1}}Requirements of equilibrium propagation}{6}{subsubsection.5.1.1}\protected@file@percent }
+\citation{Indiveri,BrainScaleS}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{5.1}.1}}Requirements of equilibrium propagation}{7}{subsubsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{5.1}.2}}Requirements of backpropagation}{7}{subsubsection.5.1.2}\protected@file@percent }
+\citation{NewEquilibriumPropPaper}
 \citation{lee2015,xie2003,pineda1987}
 \citation{lillicrap2014,crafton2019}
 \citation{bartunov2018}
@@ -94,10 +97,8 @@
 \citation{shainline2019,davies2018,nahmias2013}
 \citation{he2015,srivastava2015,xiaohu2011,krishnan2019}
 \citation{ioffe2015,glorot2010}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{5.1}.2}}Requirements of backpropagation}{7}{subsubsection.5.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{5.1}.3}}Comparison}{7}{subsubsection.5.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {{5.2}}Related work}{7}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {{5.3}}Directions for Future Research}{7}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{5.1}.3}}Comparison}{8}{subsubsection.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {{5.2}}Related work}{8}{subsection.5.2}\protected@file@percent }
 \bibstyle{frontiersinSCNS_ENG_HUMS}
 \bibdata{references.bib}
 \bibcite{bartunov2018}{{1}{2018}{{Bartunov et~al.}}{{Bartunov, Santoro, Richards, Hinton, and Lillicrap}}}
@@ -113,6 +114,7 @@
 \bibcite{mnist1998}{{11}{1998}{{LeCun and Cortes}}{{}}}
 \bibcite{lee2015}{{12}{2015}{{Lee et~al.}}{{Lee, Zhang, Fischer, and Bengio}}}
 \bibcite{lillicrap2014}{{13}{2014}{{Lillicrap et~al.}}{{Lillicrap, Cownden, Tweed, and Akerman}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{5.3}}Directions for Future Research}{9}{subsection.5.3}\protected@file@percent }
 \bibcite{nahmias2013}{{14}{2013}{{Nahmias et~al.}}{{Nahmias, Shastri, Tait, and Prucnal}}}
 \bibcite{pineda1987}{{15}{1987}{{Pineda}}{{}}}
 \bibcite{scellier17}{{16}{2016}{{Scellier and Bengio}}{{}}}
@@ -125,20 +127,20 @@
 \bibcite{xiaohu2011}{{23}{2011}{{Xiaohu et~al.}}{{Xiaohu, Xiaoling, Jinhua, Yulin, and Maolin}}}
 \bibcite{xie2003}{{24}{2003}{{Xie and Seung}}{{}}}
 \citation{scellier17}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Topology of the layered network tested in \citep  {scellier17}. All pairs of neurons in adjacent layers are connected. All connections are bidirectional. To compensate for the vanishing gradient problem, the learning rate is reduced by a factor of 4 each time distance from the output decreases by one layer.\relax }}{10}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:top_basic}{{1}{10}{Topology of the layered network tested in \citep {scellier17}. All pairs of neurons in adjacent layers are connected. All connections are bidirectional. To compensate for the vanishing gradient problem, the learning rate is reduced by a factor of 4 each time distance from the output decreases by one layer.\relax }{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Our modifications to the topology of figure \ref  {fig:top_basic} to avoid a vanishing gradient while using a global learning rate. Red dotted lines denote connections that have been removed, black dotted lines denote their replacements, and green solid lines denote added intralayer connections. All connections are bidirectional. This illustration shows a network with $p=8\%$.\relax }}{11}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:top_sw}{{2}{11}{Our modifications to the topology of figure \ref {fig:top_basic} to avoid a vanishing gradient while using a global learning rate. Red dotted lines denote connections that have been removed, black dotted lines denote their replacements, and green solid lines denote added intralayer connections. All connections are bidirectional. This illustration shows a network with $p=8\%$.\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Performance on MNIST of the networks in section \ref  {sec:implementation}. Dashed lines show the test error and solid lines show the training error. In green is a layered network with a global learning rate (section \ref  {sec:basic_topology_uniform}), in orange is a layered network with per-layer rates individually tuned to counter the vanishing gradient problem (section \ref  {sec:basic_topology}), and in green is a network with our topology, $p=7.56\%$ (section \ref  {sec:our_topology}). Observe that our topology is almost as effective as per-layer rates at countering the vanishing gradient problem that impedes training of the layered network with a global learning rate.\relax }}{12}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:mnist_comparison}{{3}{12}{Performance on MNIST of the networks in section \ref {sec:implementation}. Dashed lines show the test error and solid lines show the training error. In green is a layered network with a global learning rate (section \ref {sec:basic_topology_uniform}), in orange is a layered network with per-layer rates individually tuned to counter the vanishing gradient problem (section \ref {sec:basic_topology}), and in green is a network with our topology, $p=7.56\%$ (section \ref {sec:our_topology}). Observe that our topology is almost as effective as per-layer rates at countering the vanishing gradient problem that impedes training of the layered network with a global learning rate.\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref  {sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (left) A layered network with a single global learning rate (section \ref  {sec:basic_topology_uniform}). (center) A layered network a unique, individually-tuned learning rate for each layer (section \ref  {sec:basic_topology}). (right) A network with our topology, $p = 7.56\%$ (section \ref  {sec:our_topology}).Observe that the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers.\relax }}{13}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:mnist_layers}{{4}{13}{Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref {sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (left) A layered network with a single global learning rate (section \ref {sec:basic_topology_uniform}). (center) A layered network a unique, individually-tuned learning rate for each layer (section \ref {sec:basic_topology}). (right) A network with our topology, $p = 7.56\%$ (section \ref {sec:our_topology}).Observe that the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers.\relax }{figure.caption.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Behavior of our network (section \ref  {sec:our_topology}) with varying $p$, during the first epoch of training. (top) The training error after one epoch. (bottom) Root-mean-square correction to weights in different layers during the first epoch. Observe that as $p$ is increased, the error rate decreases and the root-mean-square corrections to each layer become more-uniform.\relax }}{14}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:mnist_1epoch}{{5}{14}{Behavior of our network (section \ref {sec:our_topology}) with varying $p$, during the first epoch of training. (top) The training error after one epoch. (bottom) Root-mean-square correction to weights in different layers during the first epoch. Observe that as $p$ is increased, the error rate decreases and the root-mean-square corrections to each layer become more-uniform.\relax }{figure.caption.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Illustration of the functionality needed to implement equilibrium propagation in hardware. Black lines denote functionality needed in the free phase. Green lines denote functionality to correct parameters. Orange lines denote functionality needed only by output neurons, that is unique to the weakly-clamped phase. There is no functionality unique to the weakly-clamped phase that is needed by all neurons.\relax }}{15}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:eqp_bd}{{6}{15}{Illustration of the functionality needed to implement equilibrium propagation in hardware. Black lines denote functionality needed in the free phase. Green lines denote functionality to correct parameters. Orange lines denote functionality needed only by output neurons, that is unique to the weakly-clamped phase. There is no functionality unique to the weakly-clamped phase that is needed by all neurons.\relax }{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Illustration of the functionality needed to implement backpropagation in hardware. Black lines denote functionality needed in the forwards phase. Green lines denote functionality to correct parameters. Red lines denote functionality unique to the backwards phase that is needed by all neurons. Orange lines denote functionality needed only by output neurons, that is unique to the backwards phase.\relax }}{16}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:backprop_bd}{{7}{16}{Illustration of the functionality needed to implement backpropagation in hardware. Black lines denote functionality needed in the forwards phase. Green lines denote functionality to correct parameters. Red lines denote functionality unique to the backwards phase that is needed by all neurons. Orange lines denote functionality needed only by output neurons, that is unique to the backwards phase.\relax }{figure.caption.11}{}}
-\global\@namedef{@lastpage@}{17}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of the capabilities a hardware neuron would need in order to implement backpropagation and equilibrium propagation.\relax }}{17}{table.caption.13}\protected@file@percent }
-\newlabel{table:bp_eqp_contrast}{{1}{17}{Comparison of the capabilities a hardware neuron would need in order to implement backpropagation and equilibrium propagation.\relax }{table.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Topology of the layered network tested in \citep  {scellier17}. All pairs of neurons in adjacent layers are connected. All connections are bidirectional. To compensate for the vanishing gradient problem, the learning rate is reduced by a factor of 4 each time distance from the output decreases by one layer.\relax }}{11}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:top_basic}{{1}{11}{Topology of the layered network tested in \citep {scellier17}. All pairs of neurons in adjacent layers are connected. All connections are bidirectional. To compensate for the vanishing gradient problem, the learning rate is reduced by a factor of 4 each time distance from the output decreases by one layer.\relax }{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Our modifications to the topology of figure \ref  {fig:top_basic} to avoid a vanishing gradient while using a global learning rate. Red dotted lines denote connections that have been removed, black dotted lines denote their replacements, and green solid lines denote added intralayer connections. All connections are bidirectional. This illustration shows a network with $p=8\%$.\relax }}{12}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:top_sw}{{2}{12}{Our modifications to the topology of figure \ref {fig:top_basic} to avoid a vanishing gradient while using a global learning rate. Red dotted lines denote connections that have been removed, black dotted lines denote their replacements, and green solid lines denote added intralayer connections. All connections are bidirectional. This illustration shows a network with $p=8\%$.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Performance on MNIST of the networks in section \ref  {sec:implementation}. Dashed lines show the test error and solid lines show the training error. In green is a layered network with a global learning rate (section \ref  {sec:basic_topology_uniform}), in orange is a layered network with per-layer rates individually tuned to counter the vanishing gradient problem (section \ref  {sec:basic_topology}), and in green is a network with our topology, $p=7.56\%$ (section \ref  {sec:our_topology}). Observe that our topology is almost as effective as per-layer rates at countering the vanishing gradient problem that impedes training of the layered network with a global learning rate.\relax }}{13}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:mnist_comparison}{{3}{13}{Performance on MNIST of the networks in section \ref {sec:implementation}. Dashed lines show the test error and solid lines show the training error. In green is a layered network with a global learning rate (section \ref {sec:basic_topology_uniform}), in orange is a layered network with per-layer rates individually tuned to counter the vanishing gradient problem (section \ref {sec:basic_topology}), and in green is a network with our topology, $p=7.56\%$ (section \ref {sec:our_topology}). Observe that our topology is almost as effective as per-layer rates at countering the vanishing gradient problem that impedes training of the layered network with a global learning rate.\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref  {sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (left) A layered network with a single global learning rate (section \ref  {sec:basic_topology_uniform}). (center) A layered network a unique, individually-tuned learning rate for each layer (section \ref  {sec:basic_topology}). (right) A network with our topology, $p = 7.56\%$ (section \ref  {sec:our_topology}).Observe that the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers.\relax }}{14}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:mnist_layers}{{4}{14}{Root-mean-square corrections to weights in different layers while training on MNIST, for the networks in section \ref {sec:implementation}. For clarity, values were subjected to an 11-point centered moving average. (left) A layered network with a single global learning rate (section \ref {sec:basic_topology_uniform}). (center) A layered network a unique, individually-tuned learning rate for each layer (section \ref {sec:basic_topology}). (right) A network with our topology, $p = 7.56\%$ (section \ref {sec:our_topology}).Observe that the layered topology with a global learning rate has a vanishing gradient problem, which is almost completely solved by tuning an individual learning rate for each layer. Our topology improves the situation by making training uniform among the deeper layers, although the shallowest layer still trains more-quickly than the deeper layers.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Behavior of our network (section \ref  {sec:our_topology}) with varying $p$, during the first epoch of training. (top) The training error after one epoch. (bottom) Root-mean-square correction to weights in different layers during the first epoch. Observe that as $p$ is increased, the error rate decreases and the root-mean-square corrections to each layer become more-uniform.\relax }}{15}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:mnist_1epoch}{{5}{15}{Behavior of our network (section \ref {sec:our_topology}) with varying $p$, during the first epoch of training. (top) The training error after one epoch. (bottom) Root-mean-square correction to weights in different layers during the first epoch. Observe that as $p$ is increased, the error rate decreases and the root-mean-square corrections to each layer become more-uniform.\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Illustration of the functionality needed to implement equilibrium propagation in hardware. Black lines denote functionality needed in the free phase. Green lines denote functionality to correct parameters. Orange lines denote functionality needed only by output neurons, that is unique to the weakly-clamped phase. There is no functionality unique to the weakly-clamped phase that is needed by all neurons.\relax }}{16}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:eqp_bd}{{6}{16}{Illustration of the functionality needed to implement equilibrium propagation in hardware. Black lines denote functionality needed in the free phase. Green lines denote functionality to correct parameters. Orange lines denote functionality needed only by output neurons, that is unique to the weakly-clamped phase. There is no functionality unique to the weakly-clamped phase that is needed by all neurons.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Illustration of the functionality needed to implement backpropagation in hardware. Black lines denote functionality needed in the forwards phase. Green lines denote functionality to correct parameters. Red lines denote functionality unique to the backwards phase that is needed by all neurons. Orange lines denote functionality needed only by output neurons, that is unique to the backwards phase.\relax }}{17}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:backprop_bd}{{7}{17}{Illustration of the functionality needed to implement backpropagation in hardware. Black lines denote functionality needed in the forwards phase. Green lines denote functionality to correct parameters. Red lines denote functionality unique to the backwards phase that is needed by all neurons. Orange lines denote functionality needed only by output neurons, that is unique to the backwards phase.\relax }{figure.caption.11}{}}
+\global\@namedef{@lastpage@}{18}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of the capabilities a hardware neuron would need in order to implement backpropagation and equilibrium propagation.\relax }}{18}{table.caption.13}\protected@file@percent }
+\newlabel{table:bp_eqp_contrast}{{1}{18}{Comparison of the capabilities a hardware neuron would need in order to implement backpropagation and equilibrium propagation.\relax }{table.caption.13}{}}

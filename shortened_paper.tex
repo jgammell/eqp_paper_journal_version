@@ -22,7 +22,7 @@
 
 \def\keyFont{\fontsize{8}{11}\helveticabold }
 \def\firstAuthorLast{Gammell {et~al.}}
-\def\Authors{Jimmy Gammell\,$^{1,*}$, Sae Woo Nam\,$^{1}$ and Adam N. McCaughan\,$^{1}$}
+\def\Authors{Jimmy Gammell\,$^{1,*}$, Sonia Buckley\,$^{1}$,Sae Woo Nam\,$^{1}$ and Adam N. McCaughan\,$^{1}$}
 \def\Address{$^{1}$National Institute of Standards and Technology, Boulder, CO, United States}
 \def\corrAuthor{Jimmy Gammell}
 \def\corrEmail{jimmy.gammell@colorado.edu}
@@ -46,7 +46,7 @@
 
 \begin{abstract}
 \section{}
-Equilibrium propagation is a learning framework that marks a step forward in the search for a biologically-plausible implementation of deep learning, and is appealing for implementation in neuromorphic hardware. However, previous implementations on layered networks encountered a vanishing gradient problem that has not yet been solved in a simple, biologically-plausible way. In this paper, we demonstrate that the vanishing gradient problem can be overcome by replacing some of a layered network's connections with random layer-skipping connections. We additionally analyze the notion of "biological plausibility" by comparing the computational requirements of equilibrium propagation versus that of a the more conventional backpropagation algorithm, and find that (FIXME conclusion?).
+Equilibrium propagation is a learning framework that marks a step forward in the search for a biologically-plausible implementation of deep learning, and could be implemented efficiently in neuromorphic hardware. Previous applications of this framework to layered networks encountered a vanishing gradient problem that has not yet been solved in a simple, biologically-plausible way. In this paper, we demonstrate that the vanishing gradient problem can be mitigated by replacing some of a layered network's connections with random layer-skipping connections. We additionally analyze the notion of "biological plausibility" by comparing the computational requirements of equilibrium propagation to those of the more conventional backpropagation algorithm, and find that (FIXME conclusion?).
 
 \tiny
  \keyFont{ \section{Keywords:} equilibrium propagation, deep learning, small-world, layer-skipping connections, neuromorphic computing, biologically-motivated}
@@ -129,7 +129,7 @@ This can be repeated on as many training examples as desired. Training can be do
 \subsection{Vanishing gradient problem}
 \label{sec:vangrad}
 
-Vanishing gradients are problematic because they reduce a network's rate of training. and could be difficult to represent in neuromorphic analog hardware due to limited bit depth. As a simple example, the multiplicative factor of 0.008 used in previous implementations would lead to significant precision errors in a system with signals represented by integers from 0-16 (bit depth of 4).
+Vanishing gradients are problematic because they reduce a network's rate of training and could be difficult to represent in neuromorphic analog hardware due to limited bit depth. As a simple example, the multiplicative factor of 0.008 used in previous implementations would lead to significant precision errors in a system with signals represented by integers from 0-16 (bit depth of 4).
 
 The vanishing gradient problem is familiar in the context of conventional feedforward networks, where techniques such as the weight initialization scheme in \citep{glorot2010}, the use of activation functions with derivatives that do not lead to output saturation \citep{schmidhuber2015}, and batch normalization \citep{ioffe2015} have been effective at overcoming it. However, in the context of the networks trained in \citep{scellier17}, the vanishing gradient problem persists even when the former two techniques are used. To our knowledge batch normalization has not been used in the context of equilibrium propagation; however, it seems unlikely to be biologically-plausible.
 
@@ -203,21 +203,96 @@ We found that our topology performs significantly worse than the basic topology 
 
 \section{Discussion}
 
-\subsection{Comparing the computational requirements of equilibrium propagation and backpropagation}
+\subsection{Comparing the computational complexity of equilibrium propagation and backpropagation}
 \label{sec:comparison}
+{ \color{red} The main motivations for using equilibrium propagation instead of an alternative 
+machine learning technique (such as deep learning using backpropagation for training) are 1) to 
+gain insight into the operation of the brain by developing target-based learning approaches in 
+biologically plausible networks and 2) to develop algorithms that are more easily implemented in 
+hardware. Below we qualitatively compare the hardware that would be needed for implementation of 
+equilibrium propagation versus for backpropagation on a standard feedforward network to gain 
+insight into the utility of these networks.}
 
 \subsubsection{Requirements of equilibrium propagation}
 
+{\color{red} Just as in the algorithm, to implement equilibrium propagation in hardware, three
+different phases of hardware operation are required. In the first (free running) phase, i}t follows
+from equations \ref{eqn:energy}, \ref{eqn:total_energy} and \ref{eqn:dynamics} that to determine 
+its state, the $i$-th neuron in a network must compute $$\frac{\partial F}{\partial 
+u_i}=u_i-\frac{1}{2}\rho'(u_i)[\sum_{i\neq j}W_{ij}\rho(u_j)+b_i],$$ plus the term 
+$\beta(u_i-y_i^{target})$ for output neurons when using a squared-error cost function, and then 
+integrate the result over time. Parameter correction rules are given by equations 
+\ref{eqn:weight_correction} and \ref{eqn:bias_correction}. {\color{red} This is exactly the 
+operation of an analog leaky integrate and fire neuron, as for example implemented in the 
+neuromorphic hardware platforms of Refs. \citenum{Indiveri, BrainScaleS} among others. A 
+qualitative diagram of potential neuron and synapse devices and their output and read/write to 
+memory operations are shown in the diagram in Fig. \ref{fig:eq_prop} (a). At each neuron $N^l_{i}$ 
+the value of $U^{l+1}_{i,0}$ is written to memory and the nonlinear function $\rho$ is applied 
+before sending to the synapse device, where it is multiplied by the weight $w^{l+1}_{ij}$ which is 
+read from memory by the synapse device. These weighted outputs are summed at the input of the next 
+neuron device ($N^{l+1}_j$) and added to a bias value $b^{l+1}_j$ that is read from memory to 
+generate $U_{l+1}$. A block diagram showing the same thing in more detail is shown in the Appendix.
 
-It follows from equations \ref{eqn:energy}, \ref{eqn:total_energy} and \ref{eqn:dynamics} that to determine its state, the $i$-th neuron in a network must compute $$\frac{\partial F}{\partial u_i}=u_i-\frac{1}{2}\rho'(u_i)[\sum_{i\neq j}W_{ij}\rho(u_j)+b_i],$$ plus the term $\beta(u_i-y_i^{target})$ for output neurons when using a squared-error cost function, and then integrate the result over time. Parameter correction rules are given by equations \ref{eqn:weight_correction} and \ref{eqn:bias_correction}. A block diagram of this process is shown in figure \ref{fig:eqp_bd} and qualitatively describes one way equilibrium propagation could potentially be implemented in hardware.
+In the second (weakly-clamped) phase, shown in Fig. \ref{fig:eq_prop} (b), the operation of the 
+hardware is exactly the same as in (a), with the value $U_{\beta}$ written to memory at each 
+neuron. Not shown in Fig. \ref{fig:eqp_bd} is the functionality at the output neurons which are 
+weakly clamped and have a new function in this phase, this is shown in Fig. X in the Appendix. 
+
+Finally, in the third phase, the weights and biases are updated as shown in Fig. \ref{fig:eq_prop}
+(c). At each neuron device the values of $U_0$ and $U_\beta$ are read from memory and $\rho({U_0})$
+and $\rho({U_\beta})$ are calculated. At the synapse device, the computation of Eq. X is performed 
+using these values from the pre- and post- synaptic neurons to calculate the weight update $\Delta 
+w$, and the value of the weight in memory is updated to $w+\Delta w$.  Similar updates are applied 
+to the bias $b$ at every neuron according to Eq. Y}. {\color{blue} Brief sentence on number of 
+neurons versus synapses for the read/write to memory operations}.
+
+%%A block diagram of this process is shown in figure \ref{fig:eqp_bd} and qualitatively describes 
+%%one way equilibrium propagation could potentially be implemented in hardware.
 
 \subsubsection{Requirements of backpropagation}
 
-In backpropagation, the activation value of a neuron $i$ in layer $l$ is given by $$\rho(u_i^l)=\rho(\sum_jW_{ij}^lu_j^{l-1}+b_i^l).$$ Parameters are then updated by computing error correction terms $\delta_i^l$ for each neuron $i$ in layer $l$; for the output layer $L$ the correction is $$\delta_i^L=\rho'(u_i^L)(\rho(u_i^L)-y_i^{target})$$ and for deeper layers it is $$\delta_i^l=\rho'(u_i^l)\sum_jW_{ij}^{l+1}\delta_j^{l+1}.$$ Weights are corrected using $$\Delta W_{ij}^l=\rho(u_i^{l-1})\delta_j^l$$ and biases using $$\Delta b_i^l=\delta_i^l.$$ The block diagram in figure \ref{fig:backprop_bd} qualitatively describes a way this algorithm could potentially be implemented in hardware.
+{\color{red} Backpropagation is an algorithm for training networks using gradient descent. It is 
+most typically applied to feedforward neural networks, in which } the activation value of a neuron 
+$i$ in layer $l$ is given by $$\rho(u_i^l)=\rho(\sum_jW_{ij}^lu_j^{l-1}+b_i^l).$$ {\color{red} This
+is very similar to the free running situation in equilibrium propagation, with the main difference 
+being that the connections are unidirectional. The qualitative implementation of this inference
+phase in hardware is shown in Fig. \ref{fig:back_prop} (a). Using backpropagation, t}he 
+parameters are then updated by computing error
+correction terms $\delta_i^l$ for each neuron $i$ in layer $l$; for the output layer $L$ the 
+correction is $$\delta_i^L=\rho'(u_i^L)(\rho(u_i^L)-y_i^{target})$$ and for deeper layers it is
+$$\delta_i^l=\rho'(u_i^l)\sum_jW_{ij}^{l+1}\delta_j^{l+1}.$$ {\color{red} The implementation of 
+this in hardware is shown in Fig. \ref{fig:back_prop} (b) (excluding layer $L$). Note that the data
+is now moving in the opposite (backwards) direction, and unlike in the case of equilibrium 
+propagation, the functions implemented by the neurons are entirely different to the operation in 
+the forward phase shown in (a). In a final phase, }weights are corrected using $$\Delta 
+W_{ij}^l=\rho(u_i^{l-1})\delta_j^l$$ and biases using 
+$$\Delta b_i^l=\delta_i^l.$$ {\color{red} This is shown in Fig. \ref{fig:back_prop} (c)}.
+
+%%The block diagram in figure \ref{fig:back_prop} qualitatively describes a way this algorithm 
+%%could potentially be implemented in hardware. 
 
 \subsubsection{Comparison}
 
-The most-significant difference between the algorithms is that in equilibrium propagation, the free and weakly-clamped phases of training are identical for most neurons and the weakly-clamped phase requires only slight modification to output neurons, whereas in backpropagation these phases very different functionality from essentially all neurons. Another visible difference is that in equilibrium propagation each neuron corresponds to a single synapse whereas in backpropagation a neuron corresponds to two synapses; we do not expect this difference to be significant because a synapse in the former case a synapse takes as inputs the outputs of all neighboring neurons, whereas in the latter case each has inputs from either shallower or deeper neurons (about half as many). While neurons in equilibrium propagation explicitly write their states to memory after the free phase, in backpropagation the need for distinct state variables to hold the activation and error term of each neurons implies a need for the same amount of memory. Various characteristics of both algorithms are compared side-by-side in table \ref{table:bp_eqp_contrast}.
+The most-significant difference between the algorithms is that in equilibrium propagation, the free
+and weakly-clamped phases of training are identical for most neurons and the weakly-clamped phase 
+requires only slight modification to output neurons, whereas in backpropagation these phases very 
+different functionality from essentially all neurons. {\color{blue} not sure I understand this next
+sentence}{\color{green}Another visible difference is that in equilibrium propagation each neuron 
+corresponds to a single synapse whereas in backpropagation a neuron corresponds to two synapses; we
+do not expect this difference to be significant because a synapse in the former case a synapse 
+takes as inputs the outputs of all neighboring neurons, whereas in the latter case each has inputs 
+from either shallower or deeper neurons (about half as many)}. {\color{red} Neurons in equilibrium 
+propagation explicitly write their states to memory after the free and weakly-clamped phases, and 
+therefore it requires the same amount of memory as for backpropagation}. In backpropagation, 
+distinct state variables are needed to hold the activation and error term of each neuron. 
+{\color{red} For a hardware implementation, the need for distinct free and weakly-clamped phases 
+(temporally non-local credit assignment) significantly reduces the advantages associated with the 
+spatially local credit assignment. Recently there has been new work that indicates that the 
+algorithm can be modified to eliminate the need for both phases \cite{NewEquilibriumPropPaper}}. 
+This would significantly reduce the memory requirements of the algorithm. Various characteristics 
+of both algorithms are compared side-by-side in table \ref{table:bp_eqp_contrast}. {\color{blue} We
+should also discuss the layer skipping connections with respect to the implementation of this 
+algorithm in hardware - just a sentence about it}
 
 \subsection{Related work}
 
