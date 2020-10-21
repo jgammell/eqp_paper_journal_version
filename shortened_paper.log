@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  20 OCT 2020 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  20 OCT 2020 20:02
 entering extended mode
 **./shortened_paper.tex
 (shortened_paper.tex
@@ -490,15 +490,6 @@ File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
 (C:\Users\jgamm\AppData\Roaming\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(C:\Users\jgamm\AppData\Roaming\MiKTeX\tex/latex/savetrees\savetrees.sty
-Package: savetrees 2016/04/13 v2.4 Pack as much text as possible onto each page
-
-
-("C:\Program Files\MiKTeX\tex/generic/iftex\ifpdf.sty"
-Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-)
-\everypar=\toks38
-)
 ("C:\Program Files\MiKTeX\tex/latex/tools\bm.sty"
 Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
@@ -670,12 +661,12 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \scratchbox=\box69
 \nofMPsegments=\count322
 \nofMParguments=\count323
-\everyMPshowfont=\toks39
+\everyMPshowfont=\toks38
 \MPscratchCnt=\count324
 \MPscratchDim=\dimen259
 \MPnumerator=\count325
 \makeMPintoPDFobject=\count326
-\everyMPtoPDFconversion=\toks40
+\everyMPtoPDFconversion=\toks39
 )
 Package crop Info: requested driver: `' on input line 30.
 Package crop Info: detected driver: `pdftex' on input line 30.
@@ -802,6 +793,9 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
@@ -850,35 +844,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 197.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [6]
-
-Package natbib Warning: Citation `Indiveri' on page 7 undefined on input line 2
-27.
-
-
-Package natbib Warning: Citation `BrainScaleS' on page 7 undefined on input lin
-e 227.
-
-
-LaTeX Warning: Reference `fig:eq_prop' on page 7 undefined on input line 229.
-
-
-LaTeX Warning: Reference `fig:eq_prop' on page 7 undefined on input line 236.
-
-
-LaTeX Warning: Reference `fig:eq_prop' on page 7 undefined on input line 241.
-
-
-LaTeX Warning: Reference `fig:back_prop' on page 7 undefined on input line 259.
-
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -886,19 +855,6 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [7]
-
-LaTeX Warning: Reference `fig:back_prop' on page 8 undefined on input line 264.
-
-
-
-LaTeX Warning: Reference `fig:back_prop' on page 8 undefined on input line 269.
-
-
-
-Package natbib Warning: Citation `NewEquilibriumPropPaper' on page 8 undefined 
-on input line 291.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -906,31 +862,31 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [8]
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 305.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 296.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 305.
+(Font)              size <5> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 305.
+(Font)              size <5> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 305.
+(Font)              size <5> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 305.
+(Font)              size <5> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 305.
+(Font)              size <5> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 305.
+(Font)              size <5> substituted on input line 296.
 
 (shortened_paper.bbl
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
@@ -941,62 +897,62 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [10]
-<figures/basic_topology_illustration.pdf, id=332, 653.56169pt x 454.57831pt>
+<figures/basic_topology_illustration.pdf, id=371, 653.56169pt x 454.57831pt>
 File: figures/basic_topology_illustration.pdf Graphic file (type pdf)
 <use figures/basic_topology_illustration.pdf>
 Package pdftex.def Info: figures/basic_topology_illustration.pdf  used on input
- line 333.
+ line 324.
 (pdftex.def)             Requested size: 504.0pt x 350.5674pt.
-<figures/topology_changes_illustration.pdf, id=335, 653.56169pt x 452.6511pt>
+<figures/topology_changes_illustration.pdf, id=374, 653.56169pt x 452.6511pt>
 File: figures/topology_changes_illustration.pdf Graphic file (type pdf)
 <use figures/topology_changes_illustration.pdf>
 Package pdftex.def Info: figures/topology_changes_illustration.pdf  used on inp
-ut line 339.
+ut line 330.
 (pdftex.def)             Requested size: 504.0pt x 349.08115pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_network_comparison.pdf, id=337, 289.08pt x 178.66502pt>
+<figures/MNIST_network_comparison.pdf, id=376, 289.08pt x 178.66502pt>
 File: figures/MNIST_network_comparison.pdf Graphic file (type pdf)
 <use figures/MNIST_network_comparison.pdf>
 Package pdftex.def Info: figures/MNIST_network_comparison.pdf  used on input li
-ne 345.
+ne 336.
 (pdftex.def)             Requested size: 504.0pt x 311.51256pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_individual_layers.pdf, id=342, 281.7542pt x 201.24745pt>
+<figures/MNIST_individual_layers.pdf, id=381, 281.7542pt x 201.24745pt>
 File: figures/MNIST_individual_layers.pdf Graphic file (type pdf)
 <use figures/MNIST_individual_layers.pdf>
 Package pdftex.def Info: figures/MNIST_individual_layers.pdf  used on input lin
-e 351.
+e 342.
 (pdftex.def)             Requested size: 504.0pt x 359.99423pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_one_epoch_performance.pdf, id=347, 289.08pt x 178.66502pt>
+<figures/MNIST_one_epoch_performance.pdf, id=386, 289.08pt x 178.66502pt>
 File: figures/MNIST_one_epoch_performance.pdf Graphic file (type pdf)
 <use figures/MNIST_one_epoch_performance.pdf>
 Package pdftex.def Info: figures/MNIST_one_epoch_performance.pdf  used on input
- line 357.
+ line 348.
 (pdftex.def)             Requested size: 504.0pt x 311.51256pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/eqp_bd.pdf, id=349, 999.735pt x 731.8542pt>
-File: figures/eqp_bd.pdf Graphic file (type pdf)
-<use figures/eqp_bd.pdf>
-Package pdftex.def Info: figures/eqp_bd.pdf  used on input line 363.
-(pdftex.def)             Requested size: 504.0pt x 368.95251pt.
+<figures/eq_prop_sb.pdf, id=388, 682.55pt x 919.435pt>
+File: figures/eq_prop_sb.pdf Graphic file (type pdf)
+<use figures/eq_prop_sb.pdf>
+Package pdftex.def Info: figures/eq_prop_sb.pdf  used on input line 355.
+(pdftex.def)             Requested size: 284.52756pt x 383.28403pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/backprop_bd.pdf, id=350, 1048.87856pt x 724.62718pt>
-File: figures/backprop_bd.pdf Graphic file (type pdf)
-<use figures/backprop_bd.pdf>
-Package pdftex.def Info: figures/backprop_bd.pdf  used on input line 369.
-(pdftex.def)             Requested size: 504.0pt x 348.19302pt.
+<figures/back_prop_sb.pdf, id=389, 682.55pt x 905.3825pt>
+File: figures/back_prop_sb.pdf Graphic file (type pdf)
+<use figures/back_prop_sb.pdf>
+Package pdftex.def Info: figures/back_prop_sb.pdf  used on input line 362.
+(pdftex.def)             Requested size: 284.52756pt x 377.42598pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1051,27 +1007,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[16 <./figures/eqp_bd.pdf
-
-pdfTeX warning: pdflatex (file ./figures/eqp_bd.pdf): PDF inclusion: invalid ot
-her resource which is no dict (key 'ProcSets', type <array>); ignored.
->]
+[16 <./figures/eq_prop_sb.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[17 <./figures/backprop_bd.pdf
-
-pdfTeX warning: pdflatex (file ./figures/backprop_bd.pdf): PDF inclusion: inval
-id other resource which is no dict (key 'ProcSets', type <array>); ignored.
->]
-Underfull \hbox (badness 1194) in paragraph at lines 389--389
-[]\OT1/ptm/b/n/12 Table 1. \OT1/ptm/m/n/12 (+20) Com-pa-ri-son of the capa-bi-l
-i-ties a har-dw-are neu-ron would need in order to imple-ment
- []
-
+[17 <./figures/back_prop_sb.pdf>]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 5.
 See the caption package documentation for explanation.
@@ -1083,14 +1026,11 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 [18
 
 ]
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 392.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
-(shortened_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 392.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 398.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 398.
+ (shortened_paper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 398.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 398.
 Package rerunfilecheck Info: File `shortened_paper.out' has not changed.
 (rerunfilecheck)             Checksum: CFDADA975F55CAE2F75D79B65C343C17;1493.
 
@@ -1098,18 +1038,15 @@ Package rerunfilecheck Info: File `shortened_paper.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 15385 strings out of 481199
- 243853 string characters out of 2915349
- 588922 words of memory out of 3000000
- 30360 multiletter control sequences out of 15000+200000
- 590432 words of font info for 254 fonts, out of 3000000 for 9000
+ 15206 strings out of 481199
+ 238744 string characters out of 2915349
+ 579822 words of memory out of 3000000
+ 30172 multiletter control sequences out of 15000+200000
+ 591434 words of font info for 262 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
- 63i,13n,101p,1770b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,13n,101p,1823b,552s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1131,9 +1068,9 @@ bo8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/f
 onts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/
 utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on shortened_paper.pdf (18 pages, 796138 bytes).
+Output written on shortened_paper.pdf (18 pages, 1212743 bytes).
 PDF statistics:
- 681 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 40137 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 765 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 42185 words of extra memory for PDF output out of 42996 (max. 10000000)
 

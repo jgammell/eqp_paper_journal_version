@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -50,6 +50,12 @@ Davies, M., Srinivasa, N., Lin, T.-H., Chinya, G., Joshi, P., Lines, A., et~al.
 \newblock \doi{10.1109/MM.2018.112130359}
 \bibAnnoteFile{davies2018}
 
+\bibitem[{Ernoult et~al.(2020)Ernoult, Grollier, Querlioz, Bengio, and
+  Scellier}]{ernoult2020}
+Ernoult, M., Grollier, J., Querlioz, D., Bengio, Y., and Scellier, B. (2020).
+\newblock Equilibrium propagation with continual weight updates
+\bibAnnoteFile{ernoult2020}
+
 \bibitem[{Glorot and Bengio(2010)}]{glorot2010}
 Glorot, X. and Bengio, Y. (2010).
 \newblock Understanding the difficulty of training deep feedforward neural
@@ -74,6 +80,15 @@ Hopfield, J. (1984).
   States of America} 81, 3088--92.
 \newblock \doi{10.1073/pnas.81.10.3088}
 \bibAnnoteFile{hopfield1984}
+
+\bibitem[{Indiveri et~al.(2011)Indiveri, Linares-Barranco, Hamilton, van
+  Schaik, Etienne-Cummings, Delbruck et~al.}]{indiveri2011}
+Indiveri, G., Linares-Barranco, B., Hamilton, T., van Schaik, A.,
+  Etienne-Cummings, R., Delbruck, T., et~al. (2011).
+\newblock Neuromorphic silicon neuron circuits.
+\newblock \emph{Frontiers in Neuroscience} 5, 73.
+\newblock \doi{10.3389/fnins.2011.00073}
+\bibAnnoteFile{indiveri2011}
 
 \bibitem[{Ioffe and Szegedy(2015)}]{ioffe2015}
 Ioffe, S. and Szegedy, C. (2015).
@@ -127,6 +142,16 @@ Scellier, B. and Bengio, Y. (2016).
   and backpropagation
 \bibAnnoteFile{scellier17}
 
+\bibitem[{Schemmel et~al.(2010)Schemmel, Br{\"u}derle, Gr{\"u}bl, Hock, Meier,
+  and Millner}]{schemmel2010}
+Schemmel, J., Br{\"u}derle, D., Gr{\"u}bl, A., Hock, M., Meier, K., and
+  Millner, S. (2010).
+\newblock A wafer-scale neuromorphic hardware system for large-scale neural
+  modeling.
+\newblock \emph{Proceedings of 2010 IEEE International Symposium on Circuits
+  and Systems} , 1947--1950
+\bibAnnoteFile{schemmel2010}
+
 \bibitem[{Schmidhuber(2015)}]{schmidhuber2015}
 Schmidhuber, J. (2015).
 \newblock Deep learning in neural networks: An overview.
@@ -166,6 +191,12 @@ Watts, D. and Strogatz, S. (1998).
 \newblock Collective dynamics of 'small-world' networks.
 \newblock \emph{Nature}
 \bibAnnoteFile{watts98}
+
+\bibitem[{Wozniak et~al.(2018)Wozniak, Pantazi, and Eleftheriou}]{wozniak2018}
+Wozniak, S., Pantazi, A., and Eleftheriou, E. (2018).
+\newblock Deep networks incorporating spiking neural dynamics.
+\newblock \emph{CoRR} abs/1812.07040
+\bibAnnoteFile{wozniak2018}
 
 \bibitem[{Xiaohu et~al.(2011)Xiaohu, Xiaoling, Jinhua, Yulin, and
   Maolin}]{xiaohu2011}

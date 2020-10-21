@@ -5,10 +5,8 @@ Reallocating 'name_of_file' (item size: 1) to 25 items.
 The style file: frontiersinSCNS_ENG_HUMS.bst
 Reallocating 'name_of_file' (item size: 1) to 15 items.
 Database file #1: references.bib
-Warning--I didn't find a database entry for "Indiveri"
-Warning--I didn't find a database entry for "BrainScaleS"
-Warning--I didn't find a database entry for "NewEquilibriumPropPaper"
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Warning--empty journal in ernoult2020
 Warning--empty journal in krishnan2019
 Warning--empty booktitle in lee2015
 Warning--empty journal in lillicrap2014
@@ -16,45 +14,45 @@ Warning--empty journal in scellier17
 Warning--empty journal in simonyan2014
 Warning--empty journal in srivastava2015tvdn
 Warning--empty pages in xiaohu2011
-You've used 24 entries,
+You've used 28 entries,
             3029 wiz_defined-function locations,
-            757 strings with 9137 characters,
-and the built_in function-call counts, 15315 in all, are:
-= -- 1244
-> -- 862
+            771 strings with 10150 characters,
+and the built_in function-call counts, 18437 in all, are:
+= -- 1488
+> -- 1096
 < -- 12
-+ -- 417
-- -- 231
-* -- 1106
-:= -- 2292
-add.period$ -- 49
-call.type$ -- 24
-change.case$ -- 200
-chr.to.int$ -- 25
-cite$ -- 55
-duplicate$ -- 1027
-empty$ -- 1016
-format.name$ -- 313
-if$ -- 3080
++ -- 537
+- -- 294
+* -- 1341
+:= -- 2748
+add.period$ -- 57
+call.type$ -- 28
+change.case$ -- 241
+chr.to.int$ -- 29
+cite$ -- 64
+duplicate$ -- 1210
+empty$ -- 1191
+format.name$ -- 388
+if$ -- 3704
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 226
-newline$ -- 159
-num.names$ -- 98
-pop$ -- 545
+missing$ -- 271
+newline$ -- 183
+num.names$ -- 114
+pop$ -- 663
 preamble$ -- 1
-purify$ -- 172
+purify$ -- 209
 quote$ -- 0
-skip$ -- 582
+skip$ -- 715
 stack$ -- 0
-substring$ -- 445
-swap$ -- 478
+substring$ -- 524
+swap$ -- 568
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 216
-warning$ -- 7
-while$ -- 85
+type$ -- 252
+warning$ -- 8
+while$ -- 99
 width$ -- 0
-write$ -- 344
-(There were 10 warnings)
+write$ -- 398
+(There were 8 warnings)
