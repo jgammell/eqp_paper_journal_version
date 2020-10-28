@@ -321,15 +321,15 @@ The U.S. Government is authorized to reproduce and distribute reprints for gover
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=\textwidth]{figures/basic_topology_illustration.pdf}
+\includegraphics[width=\textwidth]{figures/topology1_basic.pdf}
 \end{center}
-\caption{Topology of the layered network tested in \citep{scellier17}. All pairs of neurons in adjacent layers are connected. All connections are bidirectional. To compensate for the vanishing gradient problem, the learning rate is reduced by a factor of 4 each time distance from the output decreases by one layer.} \label{fig:top_basic}
+\caption{Topology of the layered network tested in \citep{scellier17}. All pairs of neurons in adjacent layers are connected. All connections are bidirectional. To compensate for the vanishing gradient problem, the learning rate $\alpha$ is reduced by a factor of 4 each time distance from the output decreases by one layer.} \label{fig:top_basic}
 \end{figure}
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=\textwidth]{figures/topology_changes_illustration.pdf}
+\includegraphics[width=\textwidth]{figures/topology2_modified.pdf}
 \end{center}
-\caption{Our modifications to the topology of figure \ref{fig:top_basic} to avoid a vanishing gradient while using a global learning rate. Red dotted lines denote connections that have been removed, black dotted lines denote their replacements, and green solid lines denote added intralayer connections. All connections are bidirectional. This illustration shows a network with $p=8\%$.} \label{fig:top_sw}
+\caption{Our modifications to the topology of figure \ref{fig:top_basic} to avoid a vanishing gradient while using a global learning rate. Red dotted lines denote connections that have been removed, black lines denote their replacements, and green solid lines denote added intralayer connections. All connections are bidirectional.} \label{fig:top_sw}
 \end{figure}
 \begin{figure}[h!]
 \begin{center}
