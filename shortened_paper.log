@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  20 OCT 2020 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  29 OCT 2020 23:49
 entering extended mode
 **./shortened_paper.tex
 (shortened_paper.tex
@@ -897,23 +897,22 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [10]
-<figures/basic_topology_illustration.pdf, id=371, 653.56169pt x 454.57831pt>
-File: figures/basic_topology_illustration.pdf Graphic file (type pdf)
-<use figures/basic_topology_illustration.pdf>
-Package pdftex.def Info: figures/basic_topology_illustration.pdf  used on input
- line 324.
-(pdftex.def)             Requested size: 504.0pt x 350.5674pt.
-<figures/topology_changes_illustration.pdf, id=374, 653.56169pt x 452.6511pt>
-File: figures/topology_changes_illustration.pdf Graphic file (type pdf)
-<use figures/topology_changes_illustration.pdf>
-Package pdftex.def Info: figures/topology_changes_illustration.pdf  used on inp
-ut line 330.
-(pdftex.def)             Requested size: 504.0pt x 349.08115pt.
+<figures/topology1_basic.pdf, id=369, 334.29231pt x 193.28143pt>
+File: figures/topology1_basic.pdf Graphic file (type pdf)
+<use figures/topology1_basic.pdf>
+Package pdftex.def Info: figures/topology1_basic.pdf  used on input line 324.
+(pdftex.def)             Requested size: 504.0pt x 291.4108pt.
+<figures/topology2_modified.pdf, id=372, 334.29231pt x 193.28143pt>
+File: figures/topology2_modified.pdf Graphic file (type pdf)
+<use figures/topology2_modified.pdf>
+Package pdftex.def Info: figures/topology2_modified.pdf  used on input line 330
+.
+(pdftex.def)             Requested size: 504.0pt x 291.4108pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_network_comparison.pdf, id=376, 289.08pt x 178.66502pt>
+<figures/MNIST_network_comparison.pdf, id=374, 289.08pt x 178.66502pt>
 File: figures/MNIST_network_comparison.pdf Graphic file (type pdf)
 <use figures/MNIST_network_comparison.pdf>
 Package pdftex.def Info: figures/MNIST_network_comparison.pdf  used on input li
@@ -922,7 +921,7 @@ ne 336.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_individual_layers.pdf, id=381, 281.7542pt x 201.24745pt>
+<figures/MNIST_individual_layers.pdf, id=379, 281.7542pt x 201.24745pt>
 File: figures/MNIST_individual_layers.pdf Graphic file (type pdf)
 <use figures/MNIST_individual_layers.pdf>
 Package pdftex.def Info: figures/MNIST_individual_layers.pdf  used on input lin
@@ -931,7 +930,7 @@ e 342.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/MNIST_one_epoch_performance.pdf, id=386, 289.08pt x 178.66502pt>
+<figures/MNIST_one_epoch_performance.pdf, id=384, 289.08pt x 178.66502pt>
 File: figures/MNIST_one_epoch_performance.pdf Graphic file (type pdf)
 <use figures/MNIST_one_epoch_performance.pdf>
 Package pdftex.def Info: figures/MNIST_one_epoch_performance.pdf  used on input
@@ -940,7 +939,7 @@ Package pdftex.def Info: figures/MNIST_one_epoch_performance.pdf  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/eq_prop_sb.pdf, id=388, 682.55pt x 919.435pt>
+<figures/eq_prop_sb.pdf, id=386, 682.55pt x 919.435pt>
 File: figures/eq_prop_sb.pdf Graphic file (type pdf)
 <use figures/eq_prop_sb.pdf>
 Package pdftex.def Info: figures/eq_prop_sb.pdf  used on input line 355.
@@ -948,7 +947,7 @@ Package pdftex.def Info: figures/eq_prop_sb.pdf  used on input line 355.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/back_prop_sb.pdf, id=389, 682.55pt x 905.3825pt>
+<figures/back_prop_sb.pdf, id=387, 682.55pt x 905.3825pt>
 File: figures/back_prop_sb.pdf Graphic file (type pdf)
 <use figures/back_prop_sb.pdf>
 Package pdftex.def Info: figures/back_prop_sb.pdf  used on input line 362.
@@ -962,24 +961,14 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 [11
 
- <./figures/basic_topology_illustration.pdf
-
-pdfTeX warning: pdflatex (file ./figures/basic_topology_illustration.pdf): PDF 
-inclusion: invalid other resource which is no dict (key 'ProcSets', type <array
->); ignored.
->]
+ <./figures/topology1_basic.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[12 <./figures/topology_changes_illustration.pdf
-
-pdfTeX warning: pdflatex (file ./figures/topology_changes_illustration.pdf): PD
-F inclusion: invalid other resource which is no dict (key 'ProcSets', type <arr
-ay>); ignored.
->]
+[12 <./figures/topology2_modified.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1041,12 +1030,12 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  15206 strings out of 481199
- 238747 string characters out of 2915349
- 579822 words of memory out of 3000000
+ 238609 string characters out of 2915349
+ 579620 words of memory out of 3000000
  30172 multiletter control sequences out of 15000+200000
  591434 words of font info for 262 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
- 63i,13n,101p,1821b,552s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,13n,101p,1824b,552s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1068,9 +1057,9 @@ bo8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/f
 onts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/
 utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on shortened_paper.pdf (18 pages, 1212711 bytes).
+Output written on shortened_paper.pdf (18 pages, 1135239 bytes).
 PDF statistics:
- 765 PDF objects out of 1000 (max. 8388607)
+ 768 PDF objects out of 1000 (max. 8388607)
  91 named destinations out of 1000 (max. 500000)
  42185 words of extra memory for PDF output out of 42996 (max. 10000000)
 
