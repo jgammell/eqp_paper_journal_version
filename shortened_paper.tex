@@ -238,13 +238,7 @@ hardware is exactly the same as in (a), with the value $U_{\beta}$ written to me
 neuron. Not shown in figure \ref{fig:eq_prop} is the functionality at the output neurons which are 
 weakly clamped and have a new function in this phase.
 
-Finally, in the third phase, the weights and biases are updated as shown in figure \ref{fig:eq_prop}
-(c). At each neuron device the values of $U_0$ and $U_\beta$ are read from memory and $\rho({U_0})$
-and $\rho({U_\beta})$ are calculated. At the synapse device, the computation of equation \ref{eqn:weight_correction} is performed 
-using these values from the pre- and post- synaptic neurons to calculate the weight update $\Delta 
-w$, and the value of the weight in memory is updated to $w+\alpha\Delta w$.  Similar updates are applied 
-to the bias $b$ at every neuron according to equation \ref{eqn:bias_correction}. {\color{blue} Brief sentence on number of 
-neurons versus synapses for the read/write to memory operations}.
+Finally, in the third phase, the weights and biases are updated as shown in figure \ref{fig:eq_prop} (c). At each neuron device the values of $U_0$ and $U_\beta$ are read from memory and $\rho({U_0})$ and $\rho({U_\beta})$ are calculated. At the synapse device, the computation of equation \ref{eqn:weight_correction} is performed using these values from the pre- and post- synaptic neurons to calculate the weight update $\Delta w$, and the value of the weight in memory is updated to $w+\alpha\Delta w$.  Similar updates are applied to the bias $b$ at every neuron according to equation \ref{eqn:bias_correction}. {\color{blue} Brief sentence on number of neurons versus synapses for the read/write to memory operations}. As shown at the top of  \ref{fig:eq_prop}, for $N$ such neurons per layer, there will be $N^2$ synapses.
 
 %%A block diagram of this process is shown in figure \ref{fig:eqp_bd} and qualitatively describes 
 %%one way equilibrium propagation could potentially be implemented in hardware.
@@ -276,14 +270,7 @@ $$\Delta b_i^l=\delta_i^l.$$ This is shown in figure \ref{fig:back_prop} (c).
 The most-significant difference between the algorithms is that in equilibrium propagation, the free
 and weakly-clamped phases of training are identical for most neurons and the weakly-clamped phase 
 requires only slight modification to output neurons, whereas in backpropagation these phases demand significantly-different functionality from essentially all neurons. There are two other differences that we do not believe to be significant in terms of ease of implementation in hardware. One is that in equilibrium propagation each pair of neurons is joined by a bidirectional synapse, whereas in backpropagation each pair is joined by two unidirectional synapses; we expect both cases to be equally easy to implement. The other is that in equilibrium propagation, each neuron must remember its equilibrium state after the free phase while it executes the weakly-clamped phase; since backpropagation implies a state variable for the activation and error term of each neuron, the memory requirement of each neuron should be the same in both cases.
-For a hardware implementation, the need for distinct free and weakly-clamped phases 
-(temporally non-local credit assignment) significantly reduces the advantages associated with the 
-spatially local credit assignment. Recently there has been new work that indicates that the 
-algorithm can be modified to eliminate the need for both phases \citep{ernoult2020}. 
-This would significantly reduce the memory requirements of the algorithm. Various characteristics 
-of both algorithms are compared side-by-side in table \ref{table:bp_eqp_contrast}. {\color{blue} We
-should also discuss the layer skipping connections with respect to the implementation of this 
-algorithm in hardware - just a sentence about it}
+For a hardware implementation, the need for distinct free and weakly-clamped phases (temporally non-local credit assignment) significantly reduces the advantages associated with the spatially local credit assignment. Recently there has been new work that indicates that the algorithm can be modified to eliminate the need for both phases \citep{ernoult2020}. This would significantly reduce the memory requirements of the algorithm. Various characteristics of both algorithms are compared side-by-side in table \ref{table:bp_eqp_contrast}. 
 
 \subsection{Related work}
 
