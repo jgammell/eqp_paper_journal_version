@@ -22,7 +22,7 @@
 
 \def\keyFont{\fontsize{8}{11}\helveticabold }
 \def\firstAuthorLast{Gammell {et~al.}}
-\def\Authors{Jimmy Gammell\,$^{1,*}$, Sonia Buckley\,$^{1}$,Sae Woo Nam\,$^{1}$ and Adam N. McCaughan\,$^{1}$}
+\def\Authors{Jimmy Gammell\,$^{1,*}$, Sonia M. Buckley\,$^{1}$,Sae Woo Nam\,$^{1}$ and Adam N. McCaughan\,$^{1}$}
 \def\Address{$^{1}$National Institute of Standards and Technology, Boulder, CO, United States}
 \def\corrAuthor{Jimmy Gammell}
 \def\corrEmail{jimmy.gammell@colorado.edu}
@@ -31,7 +31,7 @@
 \onecolumn
 \firstpage{1}
 
-\title[Layer-skipping connections]{Layer-skipping connections facilitate training of layered networks using equilibrium propagation.} 
+\title[Skip connections for equilibrium propagation]{Layer-skipping connections improve the effectiveness of equilibrium propagation on layered networks} 
 
 \author[\firstAuthorLast ]{\Authors}
 \address{}
@@ -51,7 +51,7 @@ Equilibrium propagation is a learning framework that marks a step forward in the
 \tiny
  \keyFont{ \section{Keywords:} equilibrium propagation, deep learning, small-world, layer-skipping connections, neuromorphic computing, biologically-motivated}
  
-\noindent\textbf{Number of words:} 6417
+\noindent\textbf{Number of words:} 3152
 
 \noindent\textbf{Number of figures:} 7
 
@@ -238,7 +238,7 @@ hardware is exactly the same as in (a), with the value $U_{\beta}$ written to me
 neuron. Not shown in figure \ref{fig:eq_prop} is the functionality at the output neurons which are 
 weakly clamped and have a new function in this phase.
 
-Finally, in the third phase, the weights and biases are updated as shown in figure \ref{fig:eq_prop} (c). At each neuron device the values of $U_0$ and $U_\beta$ are read from memory and $\rho({U_0})$ and $\rho({U_\beta})$ are calculated. At the synapse device, the computation of equation \ref{eqn:weight_correction} is performed using these values from the pre- and post- synaptic neurons to calculate the weight update $\Delta w$, and the value of the weight in memory is updated to $w+\alpha\Delta w$.  Similar updates are applied to the bias $b$ at every neuron according to equation \ref{eqn:bias_correction}. {\color{blue} Brief sentence on number of neurons versus synapses for the read/write to memory operations}. As shown at the top of  \ref{fig:eq_prop}, for $N$ such neurons per layer, there will be $N^2$ synapses.
+Finally, in the third phase, the weights and biases are updated as shown in figure \ref{fig:eq_prop} (c). At each neuron device the values of $U_0$ and $U_\beta$ are read from memory and $\rho({U_0})$ and $\rho({U_\beta})$ are calculated. At the synapse device, the computation of equation \ref{eqn:weight_correction} is performed using these values from the pre- and post- synaptic neurons to calculate the weight update $\Delta w$, and the value of the weight in memory is updated to $w+\alpha\Delta w$.  Similar updates are applied to the bias $b$ at every neuron according to equation \ref{eqn:bias_correction}. As shown at the top of  \ref{fig:eq_prop}, for $N$ such neurons per layer, there will be $N^2$ synapses.
 
 %%A block diagram of this process is shown in figure \ref{fig:eqp_bd} and qualitatively describes 
 %%one way equilibrium propagation could potentially be implemented in hardware.
