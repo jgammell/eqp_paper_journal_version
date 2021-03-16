@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{31}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -130,6 +130,24 @@ Nahmias, M., Shastri, B., Tait, A., and Prucnal, P. (2013).
 \newblock \doi{10.1109/JSTQE.2013.2257700}
 \bibAnnoteFile{nahmias2013}
 
+\bibitem[{Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan
+  et~al.}]{pytorch2019}
+Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., et~al.
+  (2019).
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock In \emph{Advances in Neural Information Processing Systems 32}, eds.
+  H.~Wallach, H.~Larochelle, A.~Beygelzimer, F.~d\textquotesingle
+  Alch\'{e}-Buc, E.~Fox, and R.~Garnett (Curran Associates, Inc.). 8024--8035
+\bibAnnoteFile{pytorch2019}
+
+\bibitem[{Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel,
+  Thirion, Grisel et~al.}]{sklearn2011}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
+  O., et~al. (2011).
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock \emph{Journal of Machine Learning Research} 12, 2825--2830
+\bibAnnoteFile{sklearn2011}
+
 \bibitem[{Pineda(1987)}]{pineda1987}
 Pineda, F. (1987).
 \newblock Generalization of back-propagation to recurrent neural networks.
@@ -197,6 +215,12 @@ Wozniak, S., Pantazi, A., and Eleftheriou, E. (2018).
 \newblock Deep networks incorporating spiking neural dynamics.
 \newblock \emph{CoRR} abs/1812.07040
 \bibAnnoteFile{wozniak2018}
+
+\bibitem[{Xiao et~al.(2017)Xiao, Rasul, and Vollgraf}]{fmnist2017}
+[Dataset] Xiao, H., Rasul, K., and Vollgraf, R. (2017).
+\newblock Fashion-mnist: a novel image dataset for benchmarking machine
+  learning algorithms
+\bibAnnoteFile{fmnist2017}
 
 \bibitem[{Xiaohu et~al.(2011)Xiaohu, Xiaoling, Jinhua, Yulin, and
   Maolin}]{xiaohu2011}

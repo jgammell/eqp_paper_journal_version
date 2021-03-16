@@ -5,6 +5,8 @@ Reallocating 'name_of_file' (item size: 1) to 25 items.
 The style file: frontiersinSCNS_ENG_HUMS.bst
 Reallocating 'name_of_file' (item size: 1) to 15 items.
 Database file #1: references.bib
+Warning--entry type for "fmnist2017" isn't style-file defined
+--line 398 of file references.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty journal in ernoult2020
 Warning--empty journal in krishnan2019
@@ -14,45 +16,45 @@ Warning--empty journal in scellier17
 Warning--empty journal in simonyan2014
 Warning--empty journal in srivastava2015tvdn
 Warning--empty pages in xiaohu2011
-You've used 28 entries,
+You've used 31 entries,
             3029 wiz_defined-function locations,
-            771 strings with 10150 characters,
-and the built_in function-call counts, 18437 in all, are:
-= -- 1488
-> -- 1096
+            788 strings with 11322 characters,
+and the built_in function-call counts, 21286 in all, are:
+= -- 1715
+> -- 1304
 < -- 12
-+ -- 537
-- -- 294
-* -- 1341
-:= -- 2748
-add.period$ -- 57
-call.type$ -- 28
-change.case$ -- 241
-chr.to.int$ -- 29
-cite$ -- 64
-duplicate$ -- 1210
-empty$ -- 1191
-format.name$ -- 388
-if$ -- 3704
++ -- 639
+- -- 351
+* -- 1549
+:= -- 3154
+add.period$ -- 63
+call.type$ -- 31
+change.case$ -- 275
+chr.to.int$ -- 32
+cite$ -- 70
+duplicate$ -- 1379
+empty$ -- 1355
+format.name$ -- 455
+if$ -- 4287
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 271
-newline$ -- 183
-num.names$ -- 114
-pop$ -- 663
+missing$ -- 313
+newline$ -- 200
+num.names$ -- 128
+pop$ -- 746
 preamble$ -- 1
-purify$ -- 209
+purify$ -- 238
 quote$ -- 0
-skip$ -- 715
+skip$ -- 853
 stack$ -- 0
-substring$ -- 524
-swap$ -- 568
+substring$ -- 628
+swap$ -- 664
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 252
+type$ -- 279
 warning$ -- 8
-while$ -- 99
+while$ -- 114
 width$ -- 0
-write$ -- 398
-(There were 8 warnings)
+write$ -- 439
+(There were 9 warnings)
