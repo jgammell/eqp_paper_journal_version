@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  18 MAR 2021 15:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  19 MAR 2021 22:19
 entering extended mode
 **./shortened_paper.tex
 (shortened_paper.tex
@@ -1024,7 +1024,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  15417 strings out of 481199
  241309 string characters out of 2915349
- 584375 words of memory out of 3000000
+ 585634 words of memory out of 3000000
  30363 multiletter control sequences out of 15000+200000
  592472 words of font info for 263 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
@@ -1054,7 +1054,7 @@ ic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:
 TeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/type1/u
 rw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><
 C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on shortened_paper.pdf (18 pages, 1615203 bytes).
+Output written on shortened_paper.pdf (18 pages, 1621685 bytes).
 PDF statistics:
  783 PDF objects out of 1000 (max. 8388607)
  98 named destinations out of 1000 (max. 500000)

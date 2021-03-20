@@ -276,14 +276,14 @@ We report the training and test error after 100 epochs, as well as the log-sprea
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
  Dataset & Layer sizes & Topology & L.R. & Iterations &Error (train/test)  & log-spread \\\hline
- Diabetes & 10-10-10-10-10-10-1 & MLFF & .01 & 1000/12 & .00698/.00876 & 1.291 \\
- Diabetes & 10-10-10-10-10-10-1 & SW, p=10\% & .01 & 1000/12 & .00704/.00760 & \textbf{.629} \\
- Diabetes & 10-10-10-10-10-10-10-10-10-1 & MLFF & .01 & 5000/18 & -/- & - \\
- Diabetes & 10-10-10-10-10-10-10-10-10-1 & SW, p=10\% & .01 & 5000/18 & -/- & \textbf{-} \\
- Wine & 13-10-10-10-10-10-3 & MLFF & - & 1000/12 & -/- & - \\
- Wine & 13-10-10-10-10-10-3 & SW, p=10\% & - & 1000/12 & -/- & - \\
- Wine & 13-5-5-5-5-5-5-5-5-5-5-3 & MLFF & - & 5000/22 & -/- & - \\
- Wine & 13-5-5-5-5-5-5-5-5-5-5-3 & SW, p=10\% & - & 5000/22 & -/- & - \\
+ Diabetes & 10-10-10-10-10-10-1 & MLFF & .01 & 1000/12 & .0326/.0441 & 1.085 \\
+ Diabetes & 10-10-10-10-10-10-1 & SW, p=10\% & .01 & 1000/12 & .0302/.0394 & \textbf{.557} \\
+ *Diabetes & 10-10-10-10-10-10-10-10-10-1 & MLFF & .01 & 5000/18 & .123/.0337 & 2.789 \\
+ *Diabetes & 10-10-10-10-10-10-10-10-10-1 & SW, p=10\% & .01 & 5000/18 & .0628/.0504 & \textbf{.402} \\
+ Wine & 13-10-10-10-10-10-3 & MLFF & .01 & 1000/12 & .680/.760 & 1.216 \\
+ Wine & 13-10-10-10-10-10-3 & SW, p=10\% & .01 & 1000/12 & .467/.28 & \textbf{.689} \\
+ *Wine & 13-10-10-10-10-10-10-10-10-3 & MLFF & .01 & 5000/22 & .660/.720 & 1.488 \\
+ *Wine & 13-10-10-10-10-10-10-10-10-3 & SW, p=10\% & .01 & 5000/22 & .587/.600 & \textbf{.522} \\
  MNIST & 784-500-500-500-10 & MLFF & .02 & 500/8 & .0170/.0310 & .689 \\
  MNIST & 784-500-500-500-10 & SW, p=10\% & .02 & 500/8 & .00675/.0272 & \textbf{.545} \\
  MNIST & 784-100-100-100-100-100-10 & MLFF & .015 & 1000/12 & .156/.131 & .867 \\
@@ -292,7 +292,7 @@ We report the training and test error after 100 epochs, as well as the log-sprea
  FMNIST & 784-100-100-100-100-100-10 & SW, p=10\% & .015 & 1000/12 & .152/.164 & \textbf{.484} \\\hline
 \end{tabular}
 }
-\caption{Comparison of MLFF and SW topologies with various datasets and network architectures. In all tests networks were trained for 100 epochs. Observe that the vanishing gradient problem, quantified by the log-spread (equation \ref{eqn:spread}), is consistently less-severe when using the SW topology over the MLFF topology.}
+\caption{Comparison of MLFF and SW topologies with various datasets and network architectures. Trials were run for 100 epochs with batch size 20 on MNIST and FMNIST and for 10 epochs with batch size 5 on Diabetes and Wine. Observe that the vanishing gradient problem, quantified by the log-spread (equation \ref{eqn:spread}), is consistently less-severe when using the SW topology over the MLFF topology. Error is given as proportion of classes incorrectly identified for MNIST, FMNIST and Wine (classification problems) and as absolute value of error for Diabetes (regression problem).}
 \label{tbl:results}
 \end{table}
 
