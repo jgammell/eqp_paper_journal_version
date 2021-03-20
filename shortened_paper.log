@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  20 MAR 2021 08:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  20 MAR 2021 14:16
 entering extended mode
 **./shortened_paper.tex
 (shortened_paper.tex
@@ -836,7 +836,7 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [5]
-<figures/diagram.pdf, id=301, 1374.09357pt x 536.96606pt>
+<figures/diagram.pdf, id=304, 1374.09357pt x 536.96606pt>
 File: figures/diagram.pdf Graphic file (type pdf)
 <use figures/diagram.pdf>
 Package pdftex.def Info: figures/diagram.pdf  used on input line 163.
@@ -846,13 +846,13 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [6 <./figures/diagram.pdf>]
-<figures/mnist_3layer_error.pdf, id=336, 289.08pt x 178.66502pt>
+<figures/mnist_3layer_error.pdf, id=339, 289.08pt x 178.66502pt>
 File: figures/mnist_3layer_error.pdf Graphic file (type pdf)
 <use figures/mnist_3layer_error.pdf>
 Package pdftex.def Info: figures/mnist_3layer_error.pdf  used on input line 208
 .
 (pdftex.def)             Requested size: 289.07999pt x 178.67274pt.
-<figures/mnist_3layer_rates.pdf, id=340, 289.08pt x 144.54pt>
+<figures/mnist_3layer_rates.pdf, id=343, 289.08pt x 144.54pt>
 File: figures/mnist_3layer_rates.pdf Graphic file (type pdf)
 <use figures/mnist_3layer_rates.pdf>
 Package pdftex.def Info: figures/mnist_3layer_rates.pdf  used on input line 222
@@ -885,7 +885,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 233.
 
-<figures/mnist_5layer_sweep.pdf, id=393, 289.08pt x 289.08pt>
+<figures/mnist_5layer_sweep.pdf, id=396, 289.08pt x 289.08pt>
 File: figures/mnist_5layer_sweep.pdf Graphic file (type pdf)
 <use figures/mnist_5layer_sweep.pdf>
 Package pdftex.def Info: figures/mnist_5layer_sweep.pdf  used on input line 237
@@ -896,7 +896,7 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [8 <./figures/mnist_3layer_rates.pdf>]
-<figures/matrix_image.pdf, id=462, 195.6108pt x 113.4639pt>
+<figures/matrix_image.pdf, id=465, 195.6108pt x 113.4639pt>
 File: figures/matrix_image.pdf Graphic file (type pdf)
 <use figures/matrix_image.pdf>
 Package pdftex.def Info: figures/matrix_image.pdf  used on input line 257.
@@ -960,7 +960,7 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [13]
-<figures/eq_prop_sb.pdf, id=563, 682.55pt x 919.435pt>
+<figures/eq_prop_sb.pdf, id=567, 682.55pt x 919.435pt>
 File: figures/eq_prop_sb.pdf Graphic file (type pdf)
 <use figures/eq_prop_sb.pdf>
 Package pdftex.def Info: figures/eq_prop_sb.pdf  used on input line 380.
@@ -977,7 +977,7 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [15 <./figures/eq_prop_sb.pdf>]
-<figures/back_prop_sb.pdf, id=637, 682.55pt x 905.3825pt>
+<figures/back_prop_sb.pdf, id=641, 682.55pt x 905.3825pt>
 File: figures/back_prop_sb.pdf Graphic file (type pdf)
 <use figures/back_prop_sb.pdf>
 Package pdftex.def Info: figures/back_prop_sb.pdf  used on input line 417.
@@ -1024,7 +1024,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  15417 strings out of 481199
  241309 string characters out of 2915349
- 585638 words of memory out of 3000000
+ 585667 words of memory out of 3000000
  30363 multiletter control sequences out of 15000+200000
  592472 words of font info for 263 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
@@ -1046,17 +1046,16 @@ nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Fi
-les/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiK
-TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvet
-ic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:
-/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiK
-TeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/type1/u
-rw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><
-C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on shortened_paper.pdf (18 pages, 1621392 bytes).
+les/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiK
+TeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw
+/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.
+pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fi
+les/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/
+type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8
+a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on shortened_paper.pdf (18 pages, 1614544 bytes).
 PDF statistics:
- 783 PDF objects out of 1000 (max. 8388607)
+ 784 PDF objects out of 1000 (max. 8388607)
  98 named destinations out of 1000 (max. 500000)
  44241 words of extra memory for PDF output out of 51595 (max. 10000000)
 
