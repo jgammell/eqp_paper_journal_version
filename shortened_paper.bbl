@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -147,6 +147,16 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
 \newblock Scikit-learn: Machine learning in {P}ython.
 \newblock \emph{Journal of Machine Learning Research} 12, 2825--2830
 \bibAnnoteFile{sklearn2011}
+
+\bibitem[{Pedroni et~al.(2019)Pedroni, Joshi, Deiss, Sheik, Detorakis, Paul
+  et~al.}]{pedroni2019}
+Pedroni, B.~U., Joshi, S., Deiss, S.~R., Sheik, S., Detorakis, G., Paul, S.,
+  et~al. (2019).
+\newblock Memory-efficient synaptic connectivity for spike-timing- dependent
+  plasticity.
+\newblock \emph{Frontiers in Neuroscience} 13, 357.
+\newblock \doi{10.3389/fnins.2019.00357}
+\bibAnnoteFile{pedroni2019}
 
 \bibitem[{Pineda(1987)}]{pineda1987}
 Pineda, F. (1987).

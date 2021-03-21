@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  20 MAR 2021 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.13)  21 MAR 2021 14:54
 entering extended mode
 **./shortened_paper.tex
 (shortened_paper.tex
@@ -757,7 +757,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: fo
 und PDF version <1.7>, but at most version <1.5> allowed
-<./logo1-eps-converted-to.pdf, id=87, 284.06125pt x 80.3pt>
+<./logo1-eps-converted-to.pdf, id=91, 284.06125pt x 80.3pt>
 File: ./logo1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./logo1-eps-converted-to.pdf>
 Package pdftex.def Info: ./logo1-eps-converted-to.pdf  used on input line 48.
@@ -811,19 +811,19 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [2]
-Overfull \vbox (3.49998pt too high) has occurred while \output is active []
-
-
-[3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
+[3]
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+
 [4]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-46.
+56.
  (C:\Users\jgamm\AppData\Roaming\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -836,71 +836,70 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [5]
-<figures/diagram.pdf, id=304, 1374.09357pt x 536.96606pt>
+<figures/diagram.pdf, id=319, 1374.09357pt x 536.96606pt>
 File: figures/diagram.pdf Graphic file (type pdf)
 <use figures/diagram.pdf>
-Package pdftex.def Info: figures/diagram.pdf  used on input line 163.
+Package pdftex.def Info: figures/diagram.pdf  used on input line 173.
 (pdftex.def)             Requested size: 433.62pt x 169.44836pt.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[6 <./figures/diagram.pdf>]
-<figures/mnist_3layer_error.pdf, id=339, 289.08pt x 178.66502pt>
+[6]
+<figures/mnist_3layer_error.pdf, id=346, 289.08pt x 178.66502pt>
 File: figures/mnist_3layer_error.pdf Graphic file (type pdf)
 <use figures/mnist_3layer_error.pdf>
-Package pdftex.def Info: figures/mnist_3layer_error.pdf  used on input line 208
+Package pdftex.def Info: figures/mnist_3layer_error.pdf  used on input line 218
 .
 (pdftex.def)             Requested size: 289.07999pt x 178.67274pt.
-<figures/mnist_3layer_rates.pdf, id=343, 289.08pt x 144.54pt>
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+
+[7 <./figures/diagram.pdf>]
+<figures/mnist_3layer_rates.pdf, id=368, 289.08pt x 144.54pt>
 File: figures/mnist_3layer_rates.pdf Graphic file (type pdf)
 <use figures/mnist_3layer_rates.pdf>
-Package pdftex.def Info: figures/mnist_3layer_rates.pdf  used on input line 222
+Package pdftex.def Info: figures/mnist_3layer_rates.pdf  used on input line 232
 .
 (pdftex.def)             Requested size: 289.07999pt x 144.54623pt.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[7 <./figures/mnist_3layer_error.pdf>]
-LaTeX Font Info:    Calculating math sizes for size <11.5> on input line 233.
+[8 <./figures/mnist_3layer_error.pdf> <./figures/mnist_3layer_rates.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mnist_3layer_rates.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>]
+LaTeX Font Info:    Calculating math sizes for size <11.5> on input line 243.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <11.5> not available
-(Font)              size <12> substituted on input line 233.
+(Font)              size <12> substituted on input line 243.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <11.5> not available
-(Font)              size <12> substituted on input line 233.
+(Font)              size <12> substituted on input line 243.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <11.5> not available
-(Font)              size <12> substituted on input line 233.
+(Font)              size <12> substituted on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 233.
+(hyperref)                removing `math shift' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 233.
+(hyperref)                removing `math shift' on input line 243.
 
-<figures/mnist_5layer_sweep.pdf, id=396, 289.08pt x 289.08pt>
+<figures/mnist_5layer_sweep.pdf, id=478, 289.08pt x 289.08pt>
 File: figures/mnist_5layer_sweep.pdf Graphic file (type pdf)
 <use figures/mnist_5layer_sweep.pdf>
-Package pdftex.def Info: figures/mnist_5layer_sweep.pdf  used on input line 237
+Package pdftex.def Info: figures/mnist_5layer_sweep.pdf  used on input line 247
 .
 (pdftex.def)             Requested size: 289.07999pt x 289.09251pt.
-
-Overfull \vbox (3.49998pt too high) has occurred while \output is active []
-
-
-[8 <./figures/mnist_3layer_rates.pdf>]
-<figures/matrix_image.pdf, id=465, 195.6108pt x 113.4639pt>
-File: figures/matrix_image.pdf Graphic file (type pdf)
-<use figures/matrix_image.pdf>
-Package pdftex.def Info: figures/matrix_image.pdf  used on input line 257.
-(pdftex.def)             Requested size: 289.07999pt x 167.69365pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -909,41 +908,54 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [9 <./figures/mnist_5layer_sweep.pdf>]
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 304.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 304.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 304.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 304.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 304.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 304.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 304.
-
+<figures/matrix_image.pdf, id=537, 195.6108pt x 113.4639pt>
+File: figures/matrix_image.pdf Graphic file (type pdf)
+<use figures/matrix_image.pdf>
+Package pdftex.def Info: figures/matrix_image.pdf  used on input line 267.
+(pdftex.def)             Requested size: 289.07999pt x 167.69365pt.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[10 <./figures/matrix_image.pdf>] (shortened_paper.bbl
+[10 <./figures/matrix_image.pdf>]
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 314.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 314.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 314.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 314.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 314.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 314.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 314.
+
+(shortened_paper.bbl
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
 [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+
+[12]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
 39.
  (C:\Users\jgamm\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1ptm.fd
@@ -955,32 +967,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[12])
+[13])
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[13]
-<figures/eq_prop_sb.pdf, id=567, 682.55pt x 919.435pt>
+[14]
+<figures/eq_prop_sb.pdf, id=589, 682.55pt x 919.435pt>
 File: figures/eq_prop_sb.pdf Graphic file (type pdf)
 <use figures/eq_prop_sb.pdf>
-Package pdftex.def Info: figures/eq_prop_sb.pdf  used on input line 380.
+Package pdftex.def Info: figures/eq_prop_sb.pdf  used on input line 390.
 (pdftex.def)             Requested size: 284.52756pt x 383.28403pt.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[14
+[15
 
 
 ]
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[15 <./figures/eq_prop_sb.pdf>]
-<figures/back_prop_sb.pdf, id=641, 682.55pt x 905.3825pt>
+[16 <./figures/eq_prop_sb.pdf>]
+<figures/back_prop_sb.pdf, id=663, 682.55pt x 905.3825pt>
 File: figures/back_prop_sb.pdf Graphic file (type pdf)
 <use figures/back_prop_sb.pdf>
-Package pdftex.def Info: figures/back_prop_sb.pdf  used on input line 417.
+Package pdftex.def Info: figures/back_prop_sb.pdf  used on input line 427.
 (pdftex.def)             Requested size: 284.52756pt x 377.42598pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -989,11 +1001,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[16 <./figures/back_prop_sb.pdf>]
+[17 <./figures/back_prop_sb.pdf>]
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[17]
+[18]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 5.
 See the caption package documentation for explanation.
@@ -1002,16 +1014,16 @@ See the caption package documentation for explanation.
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
 
-[18
+[19
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 530.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 530.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 540.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 540.
  (shortened_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 530.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 530.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 540.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 540.
 Package rerunfilecheck Info: File `shortened_paper.out' has not changed.
-(rerunfilecheck)             Checksum: F6E7F7CEB04D9800CEDE0A549A0F56E1;1629.
+(rerunfilecheck)             Checksum: 95A551E6A627181E63123AB6DFAF3DFB;1699.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1022,11 +1034,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15417 strings out of 481199
- 241309 string characters out of 2915349
- 585667 words of memory out of 3000000
- 30363 multiletter control sequences out of 15000+200000
- 592472 words of font info for 263 fonts, out of 3000000 for 9000
+ 15426 strings out of 481199
+ 241427 string characters out of 2915349
+ 585691 words of memory out of 3000000
+ 30366 multiletter control sequences out of 15000+200000
+ 592179 words of font info for 264 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  63i,12n,101p,2153b,576s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
@@ -1037,25 +1049,25 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Fi
-les/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiK
-TeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw
-/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.
-pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fi
-les/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/
-type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8
-a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on shortened_paper.pdf (18 pages, 1614544 bytes).
+ublic/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helve
+tic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C
+:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/type1/
+urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on shortened_paper.pdf (19 pages, 1621556 bytes).
 PDF statistics:
- 784 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
- 44241 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 807 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
+ 42201 words of extra memory for PDF output out of 42996 (max. 10000000)
 

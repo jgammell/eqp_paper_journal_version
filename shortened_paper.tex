@@ -15,7 +15,7 @@
 \usepackage{float}
 \usepackage{appendix}
 
-\newcommand{\mtx}[1]{\bm{#1}}
+\newcommand{\mtx}[1]{\mathbf{#1}}
 \DeclareMathOperator*{\minimize}{minimize}
 \newcolumntype{L}{>{\centering\arraybackslash}m{.3\textwidth}}
 \renewcommand{\arraystretch}{1.4}
@@ -79,7 +79,7 @@ In our work, we have modified the strictly-layered topology of the original impl
 
 Similarly to backpropagation, the equilibrium propagation algorithm \citep{scellier17} trains networks by approximating gradient descent on a cost function. Equilibrium propagation is applicable to any network with dynamics characterized by evolution to a fixed point of an associated energy function; our implementation is a recreation of that in \citep{scellier17}, which applies it to a continuous Hopfield network \citep{hopfield1984}. The mathematical formulation of the framework can be found in \citep{scellier17}. We discuss its appeal over backpropagation in section \ref{sec:comparison}.
 
-\subsubsection{Implementation in a continuous Hopfield network}
+\vspace{1cm}\subsubsection{Implementation in a continuous Hopfield network}
 
 Here we summarize the equations through which a continuous Hopfield network is trained using equilibrium propagation; this summary is based on the more-thorough and more-general treatment in \citep{scellier17}.
 
@@ -110,7 +110,10 @@ Equilibrium has been reached when $\frac{\partial F}{\partial \mtx{s}} \approx 0
 \begin{equation}
 \minimize_{\mtx{s}\in\mathbb{R}^{q+r}}F((\mtx{x}_d^T,\mtx{s}^T)^T; \beta, \mtx{W}, \mtx{b}) 
 \end{equation}
-by using gradient descent to find a local minimum of $F$.
+by using gradient descent to find a local minimum of $F$. Parameters $\mtx{\theta}$ can then be updated using the rule 
+\begin{equation}
+\Delta \mtx{\theta} \propto -\frac{1}{\beta}(\frac{\partial F}{\partial \mtx{\theta}}((\mtx{x}_d^T, \mtx{s}^T)^T; \beta, \mtx{W}, \mtx{b})-\frac{\partial F}{\partial \mtx{\theta}}((\mtx{x}_d^T, \mtx{s}^T)^T; 0, \mtx{W}, \mtx{b})).
+\end{equation}
 
 The procedure for training on a single input-output pair $(\mtx{x}_d,\mtx{y}_d)$ is as follows:
 \begin{enumerate}
@@ -136,16 +139,23 @@ Vanishing gradients are problematic because they reduce a network's rate of trai
 
 The vanishing gradient problem is familiar in the context of conventional feedforward networks, where techniques such as the weight initialization scheme in \citep{glorot2010}, the use of activation functions with derivatives that do not lead to output saturation \citep{schmidhuber2015}, and batch normalization \citep{ioffe2015} have been effective at overcoming it. However, in the context of the networks trained in \citep{scellier17}, the vanishing gradient problem persists even when the former two techniques are used. To our knowledge batch normalization has not been used in the context of equilibrium propagation; however, it seems unlikely to be biologically-plausible.
 
+\subsection{Small-world networks}
+
+The topology presented in this paper is inspired by small-world networks described in \citep{watts98}. In that paper the authors consider ring lattice networks which are highly-cliquish in the sense that the neighbors of a vertex, defined as the set of vertices with which the vertex shares an edge, are very likely to share edges with one-another. The typical distance between a pair of vertices in such a network, defined as the minimum number of edges that must be traversed in order to move between them, tends to be large as well. The authors demonstrate that when each edge in the network is randomly re-wired with some probability $p$, the typical distance is reduced at a much higher rate than the cliquishness as $p$ increases, and one can thereby create a network with a high degree of cliquishness yet a short typical path length between vertices. They call such a network a small-world network.
+
+Since in our context networks with multilayer feedforward topology have gradients that attenuate by a multiplicative factor of distance from the output layer, it seems reasonable to expect attenuation to be reduced when the typical number of connections between a given neuron and the output layer is reduced. Based on this we were motivated to explore the small-world-inspired topology described in subsequent sections as a way to reduce the typical number of connections between a pair of neurons and therefore between a neuron and the output layer, while largely preserving the layered structure of a network. It is worth noting that multilayer feedforward topology is not a perfect analogy for a circular lattice network because it lacks connections within layers and is therefore not cliquish based on the definition used in \citep{watts98}; nonetheless, we have seen empirically that our small-world-inspired topology does mitigate the vanishing gradient problem and generally improve network performance.
+
 \subsection{Related work}
 
-References \citep{lee2015, xie2003, pineda1987} describe other approaches to locally approximating the gradient of a cost function. References \citep{lillicrap2014, crafton2019} explore the use of a random feedback matrix for backwards connections that is more biologically-plausible than identical forwards and backwards connections. Reference \citep{bartunov2018} explores the present state of biologically-motivated deep learning, and \citep{bengio2015} discusses the criteria a biologically-plausible network would need to satisfy. References \citep{shainline2019, davies2018, nahmias2013} discuss analog hardware that could potentially implement equilibrium propagation. References \citep{he2015, srivastava2015, xiaohu2011, krishnan2019} use layer-skipping connections for other types of networks and learning frameworks. References \citep{ioffe2015, glorot2010} give approaches to solving vanishing gradient problems.
+
+References \citep{lee2015, xie2003, pineda1987} describe other approaches to locally approximating the gradient of a cost function. References \citep{lillicrap2014, crafton2019} explore the use of a random feedback matrix for backwards connections that is more biologically-plausible than identical forwards and backwards connections. Reference \citep{bartunov2018} explores the present state of biologically-motivated deep learning, and \citep{bengio2015} discusses the criteria a biologically-plausible network would need to satisfy. References \citep{shainline2019, davies2018, nahmias2013} discuss analog hardware that could potentially implement equilibrium propagation. Reference \citep{pedroni2019} discusses various means of storing weights in memory in the context of neuromorphic implementations of spike timing dependent plasticity, which is similar to equilibrium propagation in that it is a biologically-inspired learning algorithm that performs weight updates using local information. References \citep{he2015, srivastava2015, xiaohu2011, krishnan2019} use layer-skipping connections for other types of networks and learning frameworks. References \citep{ioffe2015, glorot2010} give approaches to solving vanishing gradient problems.
 
 \section{Implementation}
 \label{sec:implementation}
 
-We implemented \footnote{\url{https://github.com/jgammell/Equilibrium_Propagation_mobile.git}} the Equilibrium Propagation framework described in \citep{scellier17} using Pytorch \citep{pytorch2019}. Like the networks in \citep{scellier17}, our networks are continuous Hopfield networks with a hard sigmoid activation function $$\sigma(x)=\text{Max}\{0, \text{Min}\{x, 1\}\}$$ and squared-error cost function with no regularization term $$C=||\mtx{y}-\mtx{y}_d||_2^2,$$ where $\mtx{y}$ is the network's output and $\mtx{y}_d$ is the target output.
+We implemented \footnote{\url{https://github.com/jgammell/equilibrium_propagation}} the Equilibrium Propagation framework described in \citep{scellier17} using Pytorch \citep{pytorch2019}. Like the networks in \citep{scellier17}, our networks are continuous Hopfield networks with a hard sigmoid activation function $$\sigma(x)=\text{Max}\{0, \text{Min}\{x, 1\}\}$$ and squared-error cost function with no regularization term $$C=||\mtx{y}-\mtx{y}_d||_2^2,$$ where $\mtx{y}$ is the network's output and $\mtx{y}_d$ is the target output. As described in section 5.1 of \citep{scellier17}, we numerically approximate the dynamics described by equation \ref{eqn:dynamics} through a forward Euler approximation with step size $\epsilon$, $N_{free}$ iterations of the free phase of training and $N_{weakly-clamped}$ iterations of the weakly-clamped phase of training.
 
-We use two performance-enhancing techniques that were used in \citep{scellier17}: we randomize the sign of $\beta$ before training on each batch, which was found in the original paper to have a regularization effect, and we use persistent particles, where the state of the network after training on a given batch during epoch $n$ is used as the initial state for that batch during epoch $n+1$. Persistent particles reduce the computational resources needed to approximate the differential equation governing network evolution, and would be unnecessary in an analog implementation that can approximate the equation efficiently. Note that this technique leads to higher error rates early in training than would be present with a more-thorough approximation of the differential equation. For purposes of computational efficiency we compute training error throughout training by recording the classification error on each training batch prior to correcting the network's parameters, and we compute the test error by evolving to equilibrium and evaluating classification error for each batch in the test dataset after each full epoch of training. In some of our trials (e.g. figure \ref{fig:sweep}) this approach causes the training error to exceed the test error early on in training because the network has undergone only part of an epoch of training prior to evaluating error on each training batch, but a full epoch prior to evaluating error on each test batch.
+We use two performance-enhancing techniques that were used in \citep{scellier17}: we randomize the sign of $\beta$ before training on each batch, which was found in the original paper to have a regularization effect, and we use persistent particles, where the state of the network after training on a given batch during epoch $n$ is used as the initial state for that batch during epoch $n+1$. Persistent particles are useful when simulating equilibrium propagation on a digital computer because they allow the network to start an epoch closer to the equilibrium state, thereby reducing the number of iterations of the forward Euler approximation that are necessary to get sufficiently close to equilibrium. Note that this technique leads to higher error rates early in training than would be present with a more-thorough approximation of the differential equation. For purposes of computational efficiency we compute training error throughout training by recording the classification error on each training batch prior to correcting the network's parameters, and we compute the test error by evolving to equilibrium and evaluating classification error for each batch in the test dataset after each full epoch of training. In some of our trials (e.g. figure \ref{fig:sweep}) this approach causes the training error to exceed the test error early on in training because the network has undergone only part of an epoch of training prior to evaluating error on each training batch, but a full epoch prior to evaluating error on each test batch.
 
 In all networks we use the weight initialization scheme in \citep{glorot2010} for the weights of interlayer connections; weights connecting a pair of layers with $n_1$ and $n_2$ neurons are taken from the uniform distribution $U[-\sqrt{\frac{6}{n_1+n_2}}, \sqrt{\frac{6}{n_1+n_2}}]$. We have found empirically that for new connections added in our topology, for a network with $N$ layers it works reasonably well to draw all initial weights from $U[-a,a]$ where $a=\frac{1}{N}\sum_{i=1}^{N-1}\sqrt{\frac{6}{n_i+n_{i+1}}}$ and $n_i$ denotes the number of neurons in layer $i$.
 
@@ -283,7 +293,7 @@ We report the training and test error after 100 epochs, as well as the log-sprea
  Wine & 13-10-10-10-10-10-3 & MLFF & .01 & 1000/12 & .680/.760 & 1.216 \\
  Wine & 13-10-10-10-10-10-3 & SW, p=10\% & .01 & 1000/12 & .467/.280 & \textbf{.689} \\
  Wine & 13-10-10-10-10-10-10-10-10-3 & MLFF & .01 & 5000/18 & .653/.720 & 1.734 \\
- Wine & 13-10-10-10-10-10-10-10-10-3 & SW, p=10\% & .01 & 5000/19 & .253/.560 & \textbf{.471} \\
+ Wine & 13-10-10-10-10-10-10-10-10-3 & SW, p=10\% & .01 & 5000/18 & .253/.560 & \textbf{.471} \\
  MNIST & 784-500-500-500-10 & MLFF & .02 & 500/8 & .0170/.0310 & .689 \\
  MNIST & 784-500-500-500-10 & SW, p=10\% & .02 & 500/8 & .00675/.0272 & \textbf{.545} \\
  MNIST & 784-100-100-100-100-100-10 & MLFF & .015 & 1000/12 & .156/.131 & .867 \\
