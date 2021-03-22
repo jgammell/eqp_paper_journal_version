@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -107,28 +107,11 @@ Krishnan, G., Du, X., and Cao, Y. (2019).
 \newblock The mnist database of handwritten digits
 \bibAnnoteFile{mnist1998}
 
-\bibitem[{Lee et~al.(2015)Lee, Zhang, Fischer, and Bengio}]{lee2015}
-Lee, D.-H., Zhang, S., Fischer, A., and Bengio, Y. (2015).
-\newblock Difference target propagation.
-\newblock 498--515.
-\newblock \doi{10.1007/978-3-319-23528-8_31}
-\bibAnnoteFile{lee2015}
-
 \bibitem[{Lillicrap et~al.(2014)Lillicrap, Cownden, Tweed, and
   Akerman}]{lillicrap2014}
 Lillicrap, T.~P., Cownden, D., Tweed, D.~B., and Akerman, C.~J. (2014).
 \newblock Random feedback weights support learning in deep neural networks
 \bibAnnoteFile{lillicrap2014}
-
-\bibitem[{Nahmias et~al.(2013)Nahmias, Shastri, Tait, and
-  Prucnal}]{nahmias2013}
-Nahmias, M., Shastri, B., Tait, A., and Prucnal, P. (2013).
-\newblock A leaky integrate-and-fire laser neuron for ultrafast cognitive
-  computing.
-\newblock \emph{Selected Topics in Quantum Electronics, IEEE Journal of} 19,
-  1--12.
-\newblock \doi{10.1109/JSTQE.2013.2257700}
-\bibAnnoteFile{nahmias2013}
 
 \bibitem[{Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan
   et~al.}]{pytorch2019}
@@ -157,12 +140,6 @@ Pedroni, B.~U., Joshi, S., Deiss, S.~R., Sheik, S., Detorakis, G., Paul, S.,
 \newblock \emph{Frontiers in Neuroscience} 13, 357.
 \newblock \doi{10.3389/fnins.2019.00357}
 \bibAnnoteFile{pedroni2019}
-
-\bibitem[{Pineda(1987)}]{pineda1987}
-Pineda, F. (1987).
-\newblock Generalization of back-propagation to recurrent neural networks.
-\newblock \emph{Physical Review Letters} 59, 2229--2232
-\bibAnnoteFile{pineda1987}
 
 \bibitem[{Scellier and Bengio(2016)}]{scellier17}
 Scellier, B. and Bengio, Y. (2016).
@@ -240,13 +217,5 @@ Xiaohu, L., Xiaoling, L., Jinhua, Z., Yulin, Z., and Maolin, L. (2011).
 \newblock In \emph{2011 IEEE International Conference on Computer Science and
   Automation Engineering}
 \bibAnnoteFile{xiaohu2011}
-
-\bibitem[{Xie and Seung(2003)}]{xie2003}
-Xie, X. and Seung, H. (2003).
-\newblock Equivalence of backpropagation and contrastive hebbian learning in a
-  layered network.
-\newblock \emph{Neural computation} 15, 441--54.
-\newblock \doi{10.1162/089976603762552988}
-\bibAnnoteFile{xie2003}
 
 \end{thebibliography}

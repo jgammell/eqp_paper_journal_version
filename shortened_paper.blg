@@ -10,51 +10,50 @@ Warning--entry type for "fmnist2017" isn't style-file defined
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty journal in ernoult2020
 Warning--empty journal in krishnan2019
-Warning--empty booktitle in lee2015
 Warning--empty journal in lillicrap2014
 Warning--empty journal in scellier17
 Warning--empty journal in simonyan2014
 Warning--empty journal in srivastava2015tvdn
 Warning--empty pages in xiaohu2011
-You've used 32 entries,
+You've used 28 entries,
             3029 wiz_defined-function locations,
-            794 strings with 11626 characters,
-and the built_in function-call counts, 22224 in all, are:
-= -- 1789
-> -- 1381
-< -- 12
-+ -- 679
-- -- 372
-* -- 1617
-:= -- 3294
-add.period$ -- 66
-call.type$ -- 32
-change.case$ -- 287
-chr.to.int$ -- 33
-cite$ -- 72
-duplicate$ -- 1431
-empty$ -- 1403
-format.name$ -- 479
-if$ -- 4476
+            762 strings with 10901 characters,
+and the built_in function-call counts, 19504 in all, are:
+= -- 1553
+> -- 1258
+< -- 10
++ -- 619
+- -- 339
+* -- 1426
+:= -- 2898
+add.period$ -- 55
+call.type$ -- 28
+change.case$ -- 256
+chr.to.int$ -- 29
+cite$ -- 63
+duplicate$ -- 1250
+empty$ -- 1204
+format.name$ -- 434
+if$ -- 3910
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 327
-newline$ -- 207
-num.names$ -- 132
-pop$ -- 768
+missing$ -- 288
+newline$ -- 180
+num.names$ -- 116
+pop$ -- 682
 preamble$ -- 1
-purify$ -- 249
+purify$ -- 222
 quote$ -- 0
-skip$ -- 904
+skip$ -- 809
 stack$ -- 0
-substring$ -- 648
-swap$ -- 692
+substring$ -- 513
+swap$ -- 604
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 288
-warning$ -- 8
-while$ -- 118
+type$ -- 252
+warning$ -- 7
+while$ -- 100
 width$ -- 0
-write$ -- 455
-(There were 9 warnings)
+write$ -- 394
+(There were 8 warnings)

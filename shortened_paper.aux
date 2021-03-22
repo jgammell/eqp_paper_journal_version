@@ -58,70 +58,73 @@
 \newlabel{eqn:bias_correction}{{9}{4}{Implementation in a continuous Hopfield network}{equation.2.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{2.2}}Vanishing gradient problem}{4}{subsection.2.2}\protected@file@percent }
 \newlabel{sec:vangrad}{{{2.2}}{4}{Vanishing gradient problem}{subsection.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {{2.3}}Small-world networks}{4}{subsection.2.3}\protected@file@percent }
 \citation{watts98}
-\citation{lee2015,xie2003,pineda1987}
-\citation{lillicrap2014,crafton2019}
+\citation{he2015}
+\citation{srivastava2015}
+\citation{xiaohu2011}
+\citation{krishnan2019}
+\citation{ioffe2015}
+\citation{glorot2010}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{2.3}}Small-world networks}{5}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {{2.4}}Related work}{5}{subsection.2.4}\protected@file@percent }
 \citation{bartunov2018}
 \citation{bengio2015}
-\citation{shainline2019,davies2018,nahmias2013}
 \citation{pedroni2019}
-\citation{he2015,srivastava2015,xiaohu2011,krishnan2019}
-\citation{ioffe2015,glorot2010}
 \citation{scellier17}
 \citation{pytorch2019}
 \citation{scellier17}
 \citation{scellier17}
-\@writefile{toc}{\contentsline {subsection}{\numberline {{2.4}}Related work}{5}{subsection.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Implementation}{5}{section.3}\protected@file@percent }
-\newlabel{sec:implementation}{{3}{5}{Implementation}{section.3}{}}
 \citation{scellier17}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Implementation}{6}{section.3}\protected@file@percent }
+\newlabel{sec:implementation}{{3}{6}{Implementation}{section.3}{}}
 \citation{glorot2010}
 \citation{scellier17}
 \citation{scellier17}
 \citation{watts98}
-\@writefile{toc}{\contentsline {subsection}{\numberline {{3.1}}Multilayer feedforward (MLFF) topology}{6}{subsection.3.1}\protected@file@percent }
-\newlabel{sec:mlff_top}{{{3.1}}{6}{Multilayer feedforward (MLFF) topology}{subsection.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {{3.2}}Small-world inspired (SW) topology}{6}{subsection.3.2}\protected@file@percent }
-\newlabel{sec:our_topology}{{{3.2}}{6}{Small-world inspired (SW) topology}{subsection.3.2}{}}
-\citation{scellier17}
-\citation{scellier17}
-\citation{scellier17}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of our topological modifications to mitigate the vanishing gradient problem while using a global learning rate. (left) A network with MLFF topology as tested in \citep  {scellier17}. Observe that the learning rate increases by a factor of 4 each time the distance from the output increases by one layer. (right) A network with SW topology, where a subset of connections have been replaced by random layer-skipping connections and per-layer learning rates have been replaced by a single global learning rate. Red dotted lines denote removed connections and solid black lines denote the layer-skipping connections replacing them.\relax }}{7}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:diagram}{{1}{7}{Illustration of our topological modifications to mitigate the vanishing gradient problem while using a global learning rate. (left) A network with MLFF topology as tested in \citep {scellier17}. Observe that the learning rate increases by a factor of 4 each time the distance from the output increases by one layer. (right) A network with SW topology, where a subset of connections have been replaced by random layer-skipping connections and per-layer learning rates have been replaced by a single global learning rate. Red dotted lines denote removed connections and solid black lines denote the layer-skipping connections replacing them.\relax }{figure.caption.1}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Algorithm to generate SW topology starting with a network with MLFF topology\relax }}{7}{algocf.1}\protected@file@percent }
-\newlabel{alg:ourtop}{{1}{7}{Small-world inspired (SW) topology}{algocf.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{7}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {{4.1}}Evaluation on MNIST dataset}{7}{subsection.4.1}\protected@file@percent }
-\newlabel{sec:origpaper}{{{4.1}}{7}{Evaluation on MNIST dataset}{subsection.4.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{4.1}.1}}Classification error}{7}{subsubsection.4.1.1}\protected@file@percent }
-\newlabel{sec:network_performance}{{{{4.1}.1}}{7}{Classification error}{subsubsection.4.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{3.1}}Multilayer feedforward (MLFF) topology}{7}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:mlff_top}{{{3.1}}{7}{Multilayer feedforward (MLFF) topology}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{3.2}}Small-world inspired (SW) topology}{7}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:our_topology}{{{3.2}}{7}{Small-world inspired (SW) topology}{subsection.3.2}{}}
+\citation{scellier17}
+\citation{scellier17}
+\citation{scellier17}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Algorithm to generate SW topology starting with a network with MLFF topology\relax }}{8}{algocf.1}\protected@file@percent }
+\newlabel{alg:ourtop}{{1}{8}{Small-world inspired (SW) topology}{algocf.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Performance on MNIST of networks with 3 500-neuron hidden layers. Dashed lines show the test error and solid lines show the training error. In black is a MLFF network with per-layer rates individually tuned to counter the vanishing gradient problem. In green is the same MLFF network but with a single global learning rate. In orange is a network with SW topology, $p=10\%$. Observe that the network with our topology trains almost as quickly as a network with per-layer rates, and significantly more-quickly than a network with a single learning rate.\relax }}{8}{figure.caption.3}\protected@file@percent }
 \newlabel{fig:error}{{2}{8}{Performance on MNIST of networks with 3 500-neuron hidden layers. Dashed lines show the test error and solid lines show the training error. In black is a MLFF network with per-layer rates individually tuned to counter the vanishing gradient problem. In green is the same MLFF network but with a single global learning rate. In orange is a network with SW topology, $p=10\%$. Observe that the network with our topology trains almost as quickly as a network with per-layer rates, and significantly more-quickly than a network with a single learning rate.\relax }{figure.caption.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Root mean square corrections to weights in different layers while training on MNIST, for networks with 3 500-neuron hidden layers. Measurements were taken after each batch, and averaged over each epoch. (left) A MLFF network with a single global learning rate. (center) A MLFF network with per-layer rates individually tuned to counter the vanishing gradient problem. (right) A network with SW topology, $p=10\%$. Observe that the correction magnitudes attenuate significantly with depth in the MLFF network with a single global learning rate, and that a network with SW topology reduces the severity of the issue, albeit less-effectively than individually tuning a learning rate for each layer.\relax }}{8}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:rates}{{3}{8}{Root mean square corrections to weights in different layers while training on MNIST, for networks with 3 500-neuron hidden layers. Measurements were taken after each batch, and averaged over each epoch. (left) A MLFF network with a single global learning rate. (center) A MLFF network with per-layer rates individually tuned to counter the vanishing gradient problem. (right) A network with SW topology, $p=10\%$. Observe that the correction magnitudes attenuate significantly with depth in the MLFF network with a single global learning rate, and that a network with SW topology reduces the severity of the issue, albeit less-effectively than individually tuning a learning rate for each layer.\relax }{figure.caption.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Behavior during the first 10 epochs of training on MNIST for a SW network with 5 100-neuron hidden layers for various values of $p$. (top) In solid and dashed blue are the training and test error rates after 10 epochs and in red is the log-spread (equation \ref  {eqn:spread}) averaged over the 10 epochs. As expected, both values decrease as $p$ increases. There appears to be a strong linear correlation between the two, with coefficient of determination $r^2=.970$. This is consistent with our suspicion that mitigation of the vanishing gradient problem is the reason our topology tends to increase the rate at which layered networks train. (bottom) Root mean square corrections to weights in different layers, averaged over the 10 epochs. As expected, the spread of these values decreases as $p$ increases.\relax }}{9}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:sweep}{{4}{9}{Behavior during the first 10 epochs of training on MNIST for a SW network with 5 100-neuron hidden layers for various values of $p$. (top) In solid and dashed blue are the training and test error rates after 10 epochs and in red is the log-spread (equation \ref {eqn:spread}) averaged over the 10 epochs. As expected, both values decrease as $p$ increases. There appears to be a strong linear correlation between the two, with coefficient of determination $r^2=.970$. This is consistent with our suspicion that mitigation of the vanishing gradient problem is the reason our topology tends to increase the rate at which layered networks train. (bottom) Root mean square corrections to weights in different layers, averaged over the 10 epochs. As expected, the spread of these values decreases as $p$ increases.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{8}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {{4.1}}Evaluation on MNIST dataset}{8}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:origpaper}{{{4.1}}{8}{Evaluation on MNIST dataset}{subsection.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Root mean square corrections to weights in different layers while training on MNIST, for networks with 3 500-neuron hidden layers. (left) A MLFF network with a single global learning rate. (center) A MLFF network with per-layer rates individually tuned to counter the vanishing gradient problem. (right) A network with SW topology, $p=10\%$. Observe that the correction magnitudes attenuate significantly with depth in the MLFF network with a single global learning rate, and that a network with SW topology reduces the severity of the issue, albeit less-effectively than individually tuning a learning rate for each layer. It can be seen that the RMS correction of H3-OUTPUT differs significantly from that of deeper weights; we have observed more-generally that when we transition to a SW topology the weights closest to the output train significantly faster than other weights while the training rates of deeper weights cluster together (this can also be seen in figure \ref  {fig:sweep}).\relax }}{9}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:rates}{{3}{9}{Root mean square corrections to weights in different layers while training on MNIST, for networks with 3 500-neuron hidden layers. (left) A MLFF network with a single global learning rate. (center) A MLFF network with per-layer rates individually tuned to counter the vanishing gradient problem. (right) A network with SW topology, $p=10\%$. Observe that the correction magnitudes attenuate significantly with depth in the MLFF network with a single global learning rate, and that a network with SW topology reduces the severity of the issue, albeit less-effectively than individually tuning a learning rate for each layer. It can be seen that the RMS correction of H3-OUTPUT differs significantly from that of deeper weights; we have observed more-generally that when we transition to a SW topology the weights closest to the output train significantly faster than other weights while the training rates of deeper weights cluster together (this can also be seen in figure \ref {fig:sweep}).\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{4.1}.1}}Classification error}{9}{subsubsection.4.1.1}\protected@file@percent }
+\newlabel{sec:network_performance}{{{{4.1}.1}}{9}{Classification error}{subsubsection.4.1.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {{{4.1}.2}}Training rates of individual pairs of layers}{9}{subsubsection.4.1.2}\protected@file@percent }
 \newlabel{sec:rates}{{{{4.1}.2}}{9}{Training rates of individual pairs of layers}{subsubsection.4.1.2}{}}
 \newlabel{sec:mnist_perlayer}{{{{4.1}.2}}{9}{Training rates of individual pairs of layers}{subsubsection.4.1.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Mean absolute value correction matrix over 100 epochs for networks with 5 100-neuron hidden layers. A pixel at position $(i, j)$ corresponds to the magnitude of the correction to the connection weight between neurons $i$ and $j$. (left) A network with MLFF topology and a single global learning rate. (right) A network with SW topology, $p=10\%$. Observe that attenuation of these values with depth is less-significant in the latter than in the former.\relax }}{10}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:matrices}{{5}{10}{Mean absolute value correction matrix over 100 epochs for networks with 5 100-neuron hidden layers. A pixel at position $(i, j)$ corresponds to the magnitude of the correction to the connection weight between neurons $i$ and $j$. (left) A network with MLFF topology and a single global learning rate. (right) A network with SW topology, $p=10\%$. Observe that attenuation of these values with depth is less-significant in the latter than in the former.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Behavior during the first 10 epochs of training on MNIST for a SW network with 5 100-neuron hidden layers for various values of $p$. (top) In solid and dashed blue are the training and test error rates after 10 epochs and in red is the log-spread (equation \ref  {eqn:spread}) averaged over the 10 epochs. As expected, both values decrease as $p$ increases. There appears to be a strong linear correlation between the two, with coefficient of determination $r^2=.970$. This is consistent with our suspicion that mitigation of the vanishing gradient problem is the reason our topology tends to increase the rate at which layered networks train. (bottom) Root mean square corrections to weights in different layers, averaged over the 10 epochs. As expected, the spread of these values decreases as $p$ increases.\relax }}{10}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:sweep}{{4}{10}{Behavior during the first 10 epochs of training on MNIST for a SW network with 5 100-neuron hidden layers for various values of $p$. (top) In solid and dashed blue are the training and test error rates after 10 epochs and in red is the log-spread (equation \ref {eqn:spread}) averaged over the 10 epochs. As expected, both values decrease as $p$ increases. There appears to be a strong linear correlation between the two, with coefficient of determination $r^2=.970$. This is consistent with our suspicion that mitigation of the vanishing gradient problem is the reason our topology tends to increase the rate at which layered networks train. (bottom) Root mean square corrections to weights in different layers, averaged over the 10 epochs. As expected, the spread of these values decreases as $p$ increases.\relax }{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {{{4.1}.3}}Behavior for varying $p$}{10}{subsubsection.4.1.3}\protected@file@percent }
 \newlabel{sec:sweep}{{{{4.1}.3}}{10}{Behavior for varying $p$}{subsubsection.4.1.3}{}}
 \newlabel{eqn:spread}{{10}{10}{Behavior for varying $p$}{equation.4.10}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{4.1}.4}}Weight correction matrix}{10}{subsubsection.4.1.4}\protected@file@percent }
 \citation{mnist1998}
 \citation{fmnist2017}
 \citation{sklearn2011}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Mean absolute value correction matrix over 100 epochs for networks with 5 100-neuron hidden layers. A pixel at position $(i, j)$ corresponds to the magnitude of the correction to the connection weight between neurons $i$ and $j$. (left) A network with MLFF topology and a single global learning rate. (right) A network with SW topology, $p=10\%$. Observe that attenuation of these values with depth is less-significant in the latter than in the former.\relax }}{11}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:matrices}{{5}{11}{Mean absolute value correction matrix over 100 epochs for networks with 5 100-neuron hidden layers. A pixel at position $(i, j)$ corresponds to the magnitude of the correction to the connection weight between neurons $i$ and $j$. (left) A network with MLFF topology and a single global learning rate. (right) A network with SW topology, $p=10\%$. Observe that attenuation of these values with depth is less-significant in the latter than in the former.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {{{4.1}.4}}Weight correction matrix}{11}{subsubsection.4.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {{4.2}}Evaluation on various datasets and topologies}{11}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:comparison}{{{4.2}}{11}{Evaluation on various datasets and topologies}{subsection.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of MLFF and SW topologies with various datasets and network architectures. Trials were run for 100 epochs with batch size 20 on MNIST and FMNIST and for 10 epochs with batch size 5 on Diabetes and Wine. Observe that the vanishing gradient problem, quantified by the log-spread (equation \ref  {eqn:spread}), is significantly improved when using the SW topology over the MLFF topology. Error is given as proportion of classes incorrectly identified for MNIST, FMNIST and Wine (classification problems) and as mean absolute value of error for Diabetes (regression problem).\relax }}{12}{table.caption.7}\protected@file@percent }
+\newlabel{tbl:results}{{1}{12}{Comparison of MLFF and SW topologies with various datasets and network architectures. Trials were run for 100 epochs with batch size 20 on MNIST and FMNIST and for 10 epochs with batch size 5 on Diabetes and Wine. Observe that the vanishing gradient problem, quantified by the log-spread (equation \ref {eqn:spread}), is significantly improved when using the SW topology over the MLFF topology. Error is given as proportion of classes incorrectly identified for MNIST, FMNIST and Wine (classification problems) and as mean absolute value of error for Diabetes (regression problem).\relax }{table.caption.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Directions for Future Research}{12}{section.5}\protected@file@percent }
 \bibstyle{frontiersinSCNS_ENG_HUMS}
 \bibdata{references.bib}
 \bibcite{bartunov2018}{{1}{2018}{{Bartunov et~al.}}{{Bartunov, Santoro, Richards, Hinton, and Lillicrap}}}
 \bibcite{bengio2015}{{2}{2015}{{Bengio et~al.}}{{Bengio, Lee, Bornschein, and Lin}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {{4.2}}Evaluation on various datasets and topologies}{11}{subsection.4.2}\protected@file@percent }
-\newlabel{sec:comparison}{{{4.2}}{11}{Evaluation on various datasets and topologies}{subsection.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Directions for Future Research}{11}{section.5}\protected@file@percent }
 \bibcite{bullmore2009}{{3}{2009}{{Bullmore and Sporns}}{{}}}
 \bibcite{crafton2019}{{4}{2019}{{Crafton et~al.}}{{Crafton, Parihar, Gebhardt, and Raychowdhury}}}
 \bibcite{davies2018}{{5}{2018}{{Davies et~al.}}{{Davies, Srinivasa, Lin, Chinya, Joshi, Lines et~al.}}}
@@ -131,29 +134,23 @@
 \bibcite{hopfield1984}{{9}{1984}{{Hopfield}}{{}}}
 \bibcite{indiveri2011}{{10}{2011}{{Indiveri et~al.}}{{Indiveri, Linares-Barranco, Hamilton, van Schaik, Etienne-Cummings, Delbruck et~al.}}}
 \bibcite{ioffe2015}{{11}{2015}{{Ioffe and Szegedy}}{{}}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of MLFF and SW topologies with various datasets and network architectures. Trials were run for 100 epochs with batch size 20 on MNIST and FMNIST and for 10 epochs with batch size 5 on Diabetes and Wine. Observe that the vanishing gradient problem, quantified by the log-spread (equation \ref  {eqn:spread}), is consistently less-severe when using the SW topology over the MLFF topology. Error is given as proportion of classes incorrectly identified for MNIST, FMNIST and Wine (classification problems) and as mean absolute value of error for Diabetes (regression problem).\relax }}{12}{table.caption.7}\protected@file@percent }
-\newlabel{tbl:results}{{1}{12}{Comparison of MLFF and SW topologies with various datasets and network architectures. Trials were run for 100 epochs with batch size 20 on MNIST and FMNIST and for 10 epochs with batch size 5 on Diabetes and Wine. Observe that the vanishing gradient problem, quantified by the log-spread (equation \ref {eqn:spread}), is consistently less-severe when using the SW topology over the MLFF topology. Error is given as proportion of classes incorrectly identified for MNIST, FMNIST and Wine (classification problems) and as mean absolute value of error for Diabetes (regression problem).\relax }{table.caption.7}{}}
 \bibcite{krishnan2019}{{12}{2019}{{Krishnan et~al.}}{{Krishnan, Du, and Cao}}}
 \bibcite{mnist1998}{{13}{1998}{{LeCun and Cortes}}{{}}}
-\bibcite{lee2015}{{14}{2015}{{Lee et~al.}}{{Lee, Zhang, Fischer, and Bengio}}}
-\bibcite{lillicrap2014}{{15}{2014}{{Lillicrap et~al.}}{{Lillicrap, Cownden, Tweed, and Akerman}}}
-\bibcite{nahmias2013}{{16}{2013}{{Nahmias et~al.}}{{Nahmias, Shastri, Tait, and Prucnal}}}
-\bibcite{pytorch2019}{{17}{2019}{{Paszke et~al.}}{{Paszke, Gross, Massa, Lerer, Bradbury, Chanan et~al.}}}
-\bibcite{sklearn2011}{{18}{2011}{{Pedregosa et~al.}}{{Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel et~al.}}}
-\bibcite{pedroni2019}{{19}{2019}{{Pedroni et~al.}}{{Pedroni, Joshi, Deiss, Sheik, Detorakis, Paul et~al.}}}
-\bibcite{pineda1987}{{20}{1987}{{Pineda}}{{}}}
-\bibcite{scellier17}{{21}{2016}{{Scellier and Bengio}}{{}}}
-\bibcite{schemmel2010}{{22}{2010}{{Schemmel et~al.}}{{Schemmel, Br{\"u}derle, Gr{\"u}bl, Hock, Meier, and Millner}}}
-\bibcite{schmidhuber2015}{{23}{2015}{{Schmidhuber}}{{}}}
-\bibcite{shainline2019}{{24}{2019}{{{Shainline} et~al.}}{{{Shainline}, {Buckley}, {McCaughan}, {Chiles}, {Jafari Salim}, {Castellanos-Beltran} et~al.}}}
-\bibcite{simonyan2014}{{25}{2014}{{Simonyan and Zisserman}}{{}}}
-\bibcite{srivastava2015}{{26}{2015{a}}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
-\bibcite{srivastava2015tvdn}{{27}{2015{b}}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
-\bibcite{watts98}{{28}{1998}{{Watts and Strogatz}}{{}}}
-\bibcite{wozniak2018}{{29}{2018}{{Wozniak et~al.}}{{Wozniak, Pantazi, and Eleftheriou}}}
-\bibcite{fmnist2017}{{30}{2017}{{Xiao et~al.}}{{Xiao, Rasul, and Vollgraf}}}
-\bibcite{xiaohu2011}{{31}{2011}{{Xiaohu et~al.}}{{Xiaohu, Xiaoling, Jinhua, Yulin, and Maolin}}}
-\bibcite{xie2003}{{32}{2003}{{Xie and Seung}}{{}}}
+\bibcite{lillicrap2014}{{14}{2014}{{Lillicrap et~al.}}{{Lillicrap, Cownden, Tweed, and Akerman}}}
+\bibcite{pytorch2019}{{15}{2019}{{Paszke et~al.}}{{Paszke, Gross, Massa, Lerer, Bradbury, Chanan et~al.}}}
+\bibcite{sklearn2011}{{16}{2011}{{Pedregosa et~al.}}{{Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel et~al.}}}
+\bibcite{pedroni2019}{{17}{2019}{{Pedroni et~al.}}{{Pedroni, Joshi, Deiss, Sheik, Detorakis, Paul et~al.}}}
+\bibcite{scellier17}{{18}{2016}{{Scellier and Bengio}}{{}}}
+\bibcite{schemmel2010}{{19}{2010}{{Schemmel et~al.}}{{Schemmel, Br{\"u}derle, Gr{\"u}bl, Hock, Meier, and Millner}}}
+\bibcite{schmidhuber2015}{{20}{2015}{{Schmidhuber}}{{}}}
+\bibcite{shainline2019}{{21}{2019}{{{Shainline} et~al.}}{{{Shainline}, {Buckley}, {McCaughan}, {Chiles}, {Jafari Salim}, {Castellanos-Beltran} et~al.}}}
+\bibcite{simonyan2014}{{22}{2014}{{Simonyan and Zisserman}}{{}}}
+\bibcite{srivastava2015}{{23}{2015{a}}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
+\bibcite{srivastava2015tvdn}{{24}{2015{b}}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
+\bibcite{watts98}{{25}{1998}{{Watts and Strogatz}}{{}}}
+\bibcite{wozniak2018}{{26}{2018}{{Wozniak et~al.}}{{Wozniak, Pantazi, and Eleftheriou}}}
+\bibcite{fmnist2017}{{27}{2017}{{Xiao et~al.}}{{Xiao, Rasul, and Vollgraf}}}
+\bibcite{xiaohu2011}{{28}{2011}{{Xiaohu et~al.}}{{Xiaohu, Xiaoling, Jinhua, Yulin, and Maolin}}}
 \citation{indiveri2011,schemmel2010}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparison of the capabilities a hardware neuron would need in order to implement backpropagation and equilibrium propagation.\relax }}{15}{table.caption.11}\protected@file@percent }
 \newlabel{table:bp_eqp_contrast}{{2}{15}{Comparison of the capabilities a hardware neuron would need in order to implement backpropagation and equilibrium propagation.\relax }{table.caption.11}{}}
@@ -166,5 +163,5 @@
 \newlabel{fig:back_prop}{{7}{17}{Illustration of the functionality needed to implement backpropagation in hardware. Yellow squares indicate a value that must be stored in memory for a subsequent phase. The circles indicate ($N$) neuron and ($S$) synapse devices with the associated functions described in the text. (a) The functionality required by the neurons and synapses in the forward pass phase. (b) The functionality of the neurons and synapses (except the last layer of neurons) in the backpropagation phase. (c) The functionality of the neurons and synapses in the weight and bias update phase.\relax }{figure.caption.13}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{A.2}}Requirements of backpropagation}{17}{subsection.1.A.2}\protected@file@percent }
 \citation{ernoult2020}
+\global\@namedef{@lastpage@}{18}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{A.3}}Comparison}{18}{subsection.1.A.3}\protected@file@percent }
-\global\@namedef{@lastpage@}{19}
